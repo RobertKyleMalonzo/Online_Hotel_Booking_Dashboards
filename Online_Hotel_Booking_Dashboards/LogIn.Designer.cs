@@ -65,7 +65,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Sylfaen", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(321, 9);
+            label5.Location = new Point(346, 21);
             label5.Name = "label5";
             label5.Size = new Size(377, 39);
             label5.TabIndex = 10;
@@ -86,7 +86,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Sylfaen", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(455, 32);
+            label1.Location = new Point(455, 60);
             label1.Name = "label1";
             label1.Size = new Size(177, 39);
             label1.TabIndex = 1;
@@ -209,6 +209,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(label5);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label4);
@@ -232,7 +233,6 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(979, 540);
-            Controls.Add(label5);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Name = "LogIn";
@@ -242,7 +242,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

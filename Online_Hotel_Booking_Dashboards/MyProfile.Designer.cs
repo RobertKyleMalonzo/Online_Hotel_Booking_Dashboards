@@ -57,6 +57,8 @@
             txtPassword = new TextBox();
             pictureBox2 = new PictureBox();
             chkPassword = new CheckBox();
+            btnUpgradeProfile = new Button();
+            btnChangePassword = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -210,7 +212,7 @@
             panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(label3);
-            panel3.Location = new Point(183, 4);
+            panel3.Location = new Point(183, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(794, 48);
             panel3.TabIndex = 4;
@@ -358,11 +360,40 @@
             chkPassword.Text = "Show password";
             chkPassword.UseVisualStyleBackColor = true;
             // 
+            // btnUpgradeProfile
+            // 
+            btnUpgradeProfile.BackColor = Color.SteelBlue;
+            btnUpgradeProfile.FlatAppearance.BorderSize = 0;
+            btnUpgradeProfile.FlatStyle = FlatStyle.Flat;
+            btnUpgradeProfile.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpgradeProfile.ForeColor = Color.White;
+            btnUpgradeProfile.Location = new Point(386, 433);
+            btnUpgradeProfile.Name = "btnUpgradeProfile";
+            btnUpgradeProfile.Size = new Size(252, 43);
+            btnUpgradeProfile.TabIndex = 18;
+            btnUpgradeProfile.Text = "Upgrade Profile";
+            btnUpgradeProfile.UseVisualStyleBackColor = false;
+            // 
+            // btnChangePassword
+            // 
+            btnChangePassword.BackColor = SystemColors.ActiveBorder;
+            btnChangePassword.FlatAppearance.BorderSize = 0;
+            btnChangePassword.FlatStyle = FlatStyle.Flat;
+            btnChangePassword.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnChangePassword.Location = new Point(654, 433);
+            btnChangePassword.Name = "btnChangePassword";
+            btnChangePassword.Size = new Size(252, 43);
+            btnChangePassword.TabIndex = 19;
+            btnChangePassword.Text = "Change Password";
+            btnChangePassword.UseVisualStyleBackColor = false;
+            // 
             // MyProfile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(979, 569);
+            Controls.Add(btnChangePassword);
+            Controls.Add(btnUpgradeProfile);
             Controls.Add(chkPassword);
             Controls.Add(pictureBox2);
             Controls.Add(txtPassword);
@@ -423,5 +454,7 @@
         private TextBox txtPassword;
         private PictureBox pictureBox2;
         private CheckBox chkPassword;
+        private Button btnUpgradeProfile;
+        private Button btnChangePassword;
     }
 }
