@@ -58,11 +58,10 @@
             lblCancelled = new Label();
             label6 = new Label();
             panel7 = new Panel();
-            btnViewDetails = new Button();
             btnViewQRCode = new Button();
-            panel8 = new Panel();
             label11 = new Label();
             label1 = new Label();
+            dgvRecentRservation = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel2.SuspendLayout();
@@ -76,6 +75,7 @@
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecentRservation).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -195,6 +195,7 @@
             lblUser.Size = new Size(40, 20);
             lblUser.TabIndex = 2;
             lblUser.Text = "User";
+            lblUser.Click += lblUser_Click;
             // 
             // pictureBox5
             // 
@@ -246,6 +247,7 @@
             lblTotalBooking.Size = new Size(40, 46);
             lblTotalBooking.TabIndex = 2;
             lblTotalBooking.Text = "0";
+            lblTotalBooking.Click += lblTotalBooking_Click;
             // 
             // label3
             // 
@@ -287,6 +289,7 @@
             lblUpcoming.Size = new Size(40, 46);
             lblUpcoming.TabIndex = 3;
             lblUpcoming.Text = "0";
+            lblUpcoming.Click += lblUpcoming_Click;
             // 
             // label4
             // 
@@ -328,6 +331,7 @@
             lblCheckIn.Size = new Size(40, 46);
             lblCheckIn.TabIndex = 4;
             lblCheckIn.Text = "0";
+            lblCheckIn.Click += lblCheckIn_Click;
             // 
             // label5
             // 
@@ -369,6 +373,7 @@
             lblCancelled.Size = new Size(40, 46);
             lblCancelled.TabIndex = 5;
             lblCancelled.Text = "0";
+            lblCancelled.Click += lblCancelled_Click;
             // 
             // label6
             // 
@@ -383,27 +388,13 @@
             // panel7
             // 
             panel7.BackColor = Color.White;
-            panel7.Controls.Add(btnViewDetails);
+            panel7.Controls.Add(dgvRecentRservation);
             panel7.Controls.Add(btnViewQRCode);
-            panel7.Controls.Add(panel8);
             panel7.Controls.Add(label11);
             panel7.Location = new Point(214, 188);
             panel7.Name = "panel7";
             panel7.Size = new Size(731, 362);
             panel7.TabIndex = 6;
-            // 
-            // btnViewDetails
-            // 
-            btnViewDetails.BackColor = Color.RoyalBlue;
-            btnViewDetails.FlatAppearance.BorderSize = 0;
-            btnViewDetails.FlatStyle = FlatStyle.Flat;
-            btnViewDetails.ForeColor = Color.White;
-            btnViewDetails.Location = new Point(371, 320);
-            btnViewDetails.Name = "btnViewDetails";
-            btnViewDetails.Size = new Size(225, 31);
-            btnViewDetails.TabIndex = 9;
-            btnViewDetails.Text = "View Details";
-            btnViewDetails.UseVisualStyleBackColor = false;
             // 
             // btnViewQRCode
             // 
@@ -411,20 +402,12 @@
             btnViewQRCode.FlatAppearance.BorderSize = 0;
             btnViewQRCode.FlatStyle = FlatStyle.Flat;
             btnViewQRCode.ForeColor = Color.White;
-            btnViewQRCode.Location = new Point(107, 320);
+            btnViewQRCode.Location = new Point(260, 315);
             btnViewQRCode.Name = "btnViewQRCode";
             btnViewQRCode.Size = new Size(225, 31);
             btnViewQRCode.TabIndex = 8;
             btnViewQRCode.Text = "View QR Code";
             btnViewQRCode.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            panel8.BackColor = Color.Silver;
-            panel8.Location = new Point(30, 54);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(669, 260);
-            panel8.TabIndex = 7;
             // 
             // label11
             // 
@@ -446,6 +429,16 @@
             label1.Size = new Size(116, 20);
             label1.TabIndex = 7;
             label1.Text = "My Reservation";
+            // 
+            // dgvRecentRservation
+            // 
+            dgvRecentRservation.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRecentRservation.Location = new Point(26, 57);
+            dgvRecentRservation.Name = "dgvRecentRservation";
+            dgvRecentRservation.RowHeadersWidth = 51;
+            dgvRecentRservation.Size = new Size(683, 242);
+            dgvRecentRservation.TabIndex = 10;
+            dgvRecentRservation.CellContentClick += dgvRecentRservation_CellContentClick;
             // 
             // UserDashboard
             // 
@@ -482,6 +475,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecentRservation).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -505,9 +499,7 @@
         private Label lblCheckIn;
         private Label lblCancelled;
         private Label label6;
-        private Panel panel8;
         private Label label11;
-        private Button btnViewDetails;
         private Button btnViewQRCode;
         private Label label7;
         private Button button5;
@@ -522,5 +514,6 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private Label lblUser;
+        private DataGridView dgvRecentRservation;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Online_Hotel_Booking_Dashboards
 {
-    partial class CustomerReservation
+    partial class CustomerBookRoom
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerReservation));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerBookRoom));
             panel1 = new Panel();
+            panel2 = new Panel();
+            lblUser = new Label();
+            pictureBox5 = new PictureBox();
+            label2 = new Label();
             pictureBox6 = new PictureBox();
             button5 = new Button();
             btnMyProfile = new Button();
@@ -37,31 +41,27 @@
             btnBookRoom = new Button();
             btnMyReservation = new Button();
             label7 = new Label();
-            panel2 = new Panel();
-            lblUser = new Label();
-            pictureBox5 = new PictureBox();
-            label2 = new Label();
             panel3 = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             panel4 = new Panel();
-            label4 = new Label();
-            label6 = new Label();
+            cmbNumberGuest = new ComboBox();
+            cmbRoomType = new ComboBox();
+            dtpCheckOut = new DateTimePicker();
+            dtpCheckIn = new DateTimePicker();
+            txtTotalAmount = new TextBox();
+            btnBookNow = new Button();
+            label5 = new Label();
+            label12 = new Label();
             label8 = new Label();
             label9 = new Label();
-            label12 = new Label();
-            label5 = new Label();
-            btnBookNow = new Button();
-            txtTotalAmount = new TextBox();
-            dtpCheckIn = new DateTimePicker();
-            dtpCheckOut = new DateTimePicker();
-            cmbRoomType = new ComboBox();
-            cmbNumberGuest = new ComboBox();
+            label6 = new Label();
+            label4 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
@@ -82,6 +82,47 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(181, 565);
             panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.White;
+            panel2.Controls.Add(lblUser);
+            panel2.Controls.Add(pictureBox5);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(185, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(794, 48);
+            panel2.TabIndex = 2;
+            // 
+            // lblUser
+            // 
+            lblUser.AutoSize = true;
+            lblUser.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUser.Location = new Point(680, 12);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(40, 20);
+            lblUser.TabIndex = 2;
+            lblUser.Text = "User";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(545, 3);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(50, 40);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 1;
+            pictureBox5.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(601, 12);
+            label2.Name = "label2";
+            label2.Size = new Size(80, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Welcome, ";
             // 
             // pictureBox6
             // 
@@ -164,47 +205,6 @@
             label7.TabIndex = 10;
             label7.Text = "My Account";
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(lblUser);
-            panel2.Controls.Add(pictureBox5);
-            panel2.Controls.Add(label2);
-            panel2.Location = new Point(185, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(794, 48);
-            panel2.TabIndex = 2;
-            // 
-            // lblUser
-            // 
-            lblUser.AutoSize = true;
-            lblUser.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUser.Location = new Point(680, 12);
-            lblUser.Name = "lblUser";
-            lblUser.Size = new Size(40, 20);
-            lblUser.TabIndex = 2;
-            lblUser.Text = "User";
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(545, 3);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(50, 40);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 1;
-            pictureBox5.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(601, 12);
-            label2.Name = "label2";
-            label2.Size = new Size(80, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Welcome, ";
-            // 
             // panel3
             // 
             panel3.BackColor = Color.White;
@@ -265,25 +265,77 @@
             panel4.Size = new Size(736, 351);
             panel4.TabIndex = 3;
             // 
-            // label4
+            // cmbNumberGuest
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(188, 74);
-            label4.Name = "label4";
-            label4.Size = new Size(135, 31);
-            label4.TabIndex = 0;
-            label4.Text = "Book Room";
+            cmbNumberGuest.FormattingEnabled = true;
+            cmbNumberGuest.Items.AddRange(new object[] { "1 guest", "2 guest", "3 guest", "4 guest", "5 guest", "6 guest" });
+            cmbNumberGuest.Location = new Point(194, 211);
+            cmbNumberGuest.Name = "cmbNumberGuest";
+            cmbNumberGuest.Size = new Size(510, 28);
+            cmbNumberGuest.TabIndex = 19;
             // 
-            // label6
+            // cmbRoomType
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(24, 27);
-            label6.Name = "label6";
-            label6.Size = new Size(89, 20);
-            label6.TabIndex = 5;
-            label6.Text = "Room Type:";
+            cmbRoomType.FormattingEnabled = true;
+            cmbRoomType.Items.AddRange(new object[] { "Standard Room", "Suite Room", "Deluxe Room" });
+            cmbRoomType.Location = new Point(194, 24);
+            cmbRoomType.Name = "cmbRoomType";
+            cmbRoomType.Size = new Size(510, 28);
+            cmbRoomType.TabIndex = 18;
+            // 
+            // dtpCheckOut
+            // 
+            dtpCheckOut.Location = new Point(194, 148);
+            dtpCheckOut.Name = "dtpCheckOut";
+            dtpCheckOut.Size = new Size(510, 27);
+            dtpCheckOut.TabIndex = 17;
+            // 
+            // dtpCheckIn
+            // 
+            dtpCheckIn.Location = new Point(194, 84);
+            dtpCheckIn.Name = "dtpCheckIn";
+            dtpCheckIn.Size = new Size(510, 27);
+            dtpCheckIn.TabIndex = 16;
+            // 
+            // txtTotalAmount
+            // 
+            txtTotalAmount.Location = new Point(194, 268);
+            txtTotalAmount.Name = "txtTotalAmount";
+            txtTotalAmount.Size = new Size(510, 27);
+            txtTotalAmount.TabIndex = 15;
+            // 
+            // btnBookNow
+            // 
+            btnBookNow.BackColor = Color.SteelBlue;
+            btnBookNow.FlatAppearance.BorderSize = 0;
+            btnBookNow.FlatStyle = FlatStyle.Flat;
+            btnBookNow.ForeColor = Color.White;
+            btnBookNow.Location = new Point(312, 303);
+            btnBookNow.Name = "btnBookNow";
+            btnBookNow.Size = new Size(278, 38);
+            btnBookNow.TabIndex = 13;
+            btnBookNow.Text = "Book now";
+            btnBookNow.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(24, 271);
+            label5.Name = "label5";
+            label5.Size = new Size(105, 20);
+            label5.TabIndex = 12;
+            label5.Text = "Total Amount:";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(24, 212);
+            label12.Name = "label12";
+            label12.Size = new Size(130, 20);
+            label12.TabIndex = 11;
+            label12.Text = "Number of Guest:";
             // 
             // label8
             // 
@@ -305,79 +357,27 @@
             label9.TabIndex = 6;
             label9.Text = "Check-in Date:";
             // 
-            // label12
+            // label6
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(24, 212);
-            label12.Name = "label12";
-            label12.Size = new Size(130, 20);
-            label12.TabIndex = 11;
-            label12.Text = "Number of Guest:";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(24, 27);
+            label6.Name = "label6";
+            label6.Size = new Size(89, 20);
+            label6.TabIndex = 5;
+            label6.Text = "Room Type:";
             // 
-            // label5
+            // label4
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(24, 271);
-            label5.Name = "label5";
-            label5.Size = new Size(105, 20);
-            label5.TabIndex = 12;
-            label5.Text = "Total Amount:";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(188, 74);
+            label4.Name = "label4";
+            label4.Size = new Size(135, 31);
+            label4.TabIndex = 0;
+            label4.Text = "Book Room";
             // 
-            // btnBookNow
-            // 
-            btnBookNow.BackColor = Color.SteelBlue;
-            btnBookNow.FlatAppearance.BorderSize = 0;
-            btnBookNow.FlatStyle = FlatStyle.Flat;
-            btnBookNow.ForeColor = Color.White;
-            btnBookNow.Location = new Point(312, 303);
-            btnBookNow.Name = "btnBookNow";
-            btnBookNow.Size = new Size(278, 38);
-            btnBookNow.TabIndex = 13;
-            btnBookNow.Text = "Book now";
-            btnBookNow.UseVisualStyleBackColor = false;
-            // 
-            // txtTotalAmount
-            // 
-            txtTotalAmount.Location = new Point(194, 268);
-            txtTotalAmount.Name = "txtTotalAmount";
-            txtTotalAmount.Size = new Size(510, 27);
-            txtTotalAmount.TabIndex = 15;
-            // 
-            // dtpCheckIn
-            // 
-            dtpCheckIn.Location = new Point(194, 84);
-            dtpCheckIn.Name = "dtpCheckIn";
-            dtpCheckIn.Size = new Size(510, 27);
-            dtpCheckIn.TabIndex = 16;
-            // 
-            // dtpCheckOut
-            // 
-            dtpCheckOut.Location = new Point(194, 148);
-            dtpCheckOut.Name = "dtpCheckOut";
-            dtpCheckOut.Size = new Size(510, 27);
-            dtpCheckOut.TabIndex = 17;
-            // 
-            // cmbRoomType
-            // 
-            cmbRoomType.FormattingEnabled = true;
-            cmbRoomType.Items.AddRange(new object[] { "Standard Room", "Suite Room", "Deluxe Room" });
-            cmbRoomType.Location = new Point(194, 24);
-            cmbRoomType.Name = "cmbRoomType";
-            cmbRoomType.Size = new Size(510, 28);
-            cmbRoomType.TabIndex = 18;
-            // 
-            // cmbNumberGuest
-            // 
-            cmbNumberGuest.FormattingEnabled = true;
-            cmbNumberGuest.Items.AddRange(new object[] { "1 guest", "2 guest", "3 guest", "4 guest", "5 guest", "6 guest" });
-            cmbNumberGuest.Location = new Point(194, 211);
-            cmbNumberGuest.Name = "cmbNumberGuest";
-            cmbNumberGuest.Size = new Size(510, 28);
-            cmbNumberGuest.TabIndex = 19;
-            // 
-            // CustomerReservation
+            // CustomerBookRoom
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -386,14 +386,14 @@
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel1);
-            Name = "CustomerReservation";
+            Name = "CustomerBookRoom";
             Text = "CustomerReservation";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

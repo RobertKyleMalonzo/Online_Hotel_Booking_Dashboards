@@ -21,5 +21,35 @@ namespace Online_Hotel_Booking_Dashboards
         {
 
         }
+
+        private void lblUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalBooking_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUpcoming_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCheckIn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCancelled_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvRecentRservation_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
