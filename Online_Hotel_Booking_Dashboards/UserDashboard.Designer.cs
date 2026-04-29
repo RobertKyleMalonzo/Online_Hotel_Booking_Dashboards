@@ -175,7 +175,8 @@
             label7.Location = new Point(41, 120);
             label7.Name = "label7";
             label7.Size = new Size(103, 23);
-            label7.Text = "My Account";           
+            label7.TabIndex = 17;
+            label7.Text = "My Account";
             // 
             // panel2
             // 
