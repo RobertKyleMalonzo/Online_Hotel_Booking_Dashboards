@@ -131,7 +131,7 @@
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 346);
+            button5.Location = new Point(-34, 352);
             button5.Name = "button5";
             button5.Size = new Size(178, 44);
             button5.TabIndex = 15;
@@ -144,7 +144,7 @@
             btnMyProfile.FlatAppearance.BorderSize = 0;
             btnMyProfile.FlatStyle = FlatStyle.Flat;
             btnMyProfile.ForeColor = Color.White;
-            btnMyProfile.Location = new Point(0, 297);
+            btnMyProfile.Location = new Point(-31, 301);
             btnMyProfile.Name = "btnMyProfile";
             btnMyProfile.Size = new Size(178, 44);
             btnMyProfile.TabIndex = 14;
@@ -157,7 +157,7 @@
             btnMyQrCode.FlatAppearance.BorderSize = 0;
             btnMyQrCode.FlatStyle = FlatStyle.Flat;
             btnMyQrCode.ForeColor = Color.White;
-            btnMyQrCode.Location = new Point(1, 247);
+            btnMyQrCode.Location = new Point(-13, 252);
             btnMyQrCode.Name = "btnMyQrCode";
             btnMyQrCode.Size = new Size(178, 44);
             btnMyQrCode.TabIndex = 13;
@@ -170,7 +170,7 @@
             btnBookRoom.FlatAppearance.BorderSize = 0;
             btnBookRoom.FlatStyle = FlatStyle.Flat;
             btnBookRoom.ForeColor = Color.White;
-            btnBookRoom.Location = new Point(1, 197);
+            btnBookRoom.Location = new Point(-13, 199);
             btnBookRoom.Name = "btnBookRoom";
             btnBookRoom.Size = new Size(178, 44);
             btnBookRoom.TabIndex = 12;
@@ -183,7 +183,7 @@
             btnMyReservation.FlatAppearance.BorderSize = 0;
             btnMyReservation.FlatStyle = FlatStyle.Flat;
             btnMyReservation.ForeColor = Color.White;
-            btnMyReservation.Location = new Point(1, 149);
+            btnMyReservation.Location = new Point(0, 149);
             btnMyReservation.Name = "btnMyReservation";
             btnMyReservation.Size = new Size(178, 44);
             btnMyReservation.TabIndex = 11;
