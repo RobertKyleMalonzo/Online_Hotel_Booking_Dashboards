@@ -17,43 +17,134 @@ namespace Online_Hotel_Booking_Dashboards
             InitializeComponent();
         }
 
-
-
-        private void label7_Click(object sender, EventArgs e)
+        private void UserDashboard_Load(object sender, EventArgs e)
         {
-
+            LoadReservations();
         }
 
-        private void lblUser_Click(object sender, EventArgs e)
+        // ==========================================
+        // LOAD RESERVATION DATA
+        // ==========================================
+        private void LoadReservations()
         {
+            DBConnect db = new DBConnect();
 
+            try
+            {
+                db.Open();
+
+                string query = @"SELECT reservation_id,
+                                        room_number,
+                                        check_in,
+                                        check_out,
+                                        status
+                                 FROM reservations";
+
+                MySql.Data.MySqlClient.MySqlCommand cmd =
+                    new MySql.Data.MySqlClient.MySqlCommand(query, db.Connection);
+
+                MySql.Data.MySqlClient.MySqlDataAdapter adapter =
+                    new MySql.Data.MySqlClient.MySqlDataAdapter(cmd);
+
+                DataTable table = new DataTable();
+
+                adapter.Fill(table);
+
+                dgvRecentRservation.DataSource = table;
+
+                // COLUMN HEADER
+                dgvRecentRservation.Columns["reservation_id"].HeaderText = "Reservation ID";
+                dgvRecentRservation.Columns["room_number"].HeaderText = "Room";
+                dgvRecentRservation.Columns["check_in"].HeaderText = "Check-in";
+                dgvRecentRservation.Columns["check_out"].HeaderText = "Check-out";
+                dgvRecentRservation.Columns["status"].HeaderText = "Status";
+
+                // ADD VIEW BUTTON
+                if (!dgvRecentRservation.Columns.Contains("View"))
+                {
+                    DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+                    btn.Name = "View";
+                    btn.HeaderText = "Action";
+                    btn.Text = "View";
+                    btn.UseColumnTextForButtonValue = true;
+
+                    dgvRecentRservation.Columns.Add(btn);
+                }
+
+                // TOTAL BOOKINGS
+                lblTotalBooking.Text = table.Rows.Count.ToString();
+
+                // STATUS COUNTER
+                CountStatus();
+
+                adapter.Dispose();
+                cmd.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                db.Close();
+            }
         }
 
-        private void lblTotalBooking_Click(object sender, EventArgs e)
+        // ==========================================
+        // COUNT STATUS
+        // ==========================================
+        private void CountStatus()
         {
+            int upcoming = 0;
+            int checkin = 0;
+            int cancelled = 0;
 
+            foreach (DataGridViewRow row in dgvRecentRservation.Rows)
+            {
+                if (row.Cells["status"].Value != null)
+                {
+                    string status = row.Cells["status"].Value.ToString();
+
+                    if (status == "Upcoming")
+                        upcoming++;
+
+                    else if (status == "Checked-in")
+                        checkin++;
+
+                    else if (status == "Cancelled")
+                        cancelled++;
+                }
+            }
+
+            lblUpcoming.Text = upcoming.ToString();
+            lblCheckIn.Text = checkin.ToString();
+            lblCancelled.Text = cancelled.ToString();
         }
 
-        private void lblUpcoming_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCheckIn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCancelled_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // ==========================================
+        // VIEW BUTTON CLICK
+        // ==========================================
         private void dgvRecentRservation_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0 &&
+                dgvRecentRservation.Columns[e.ColumnIndex].Name == "View")
+            {
+                DataGridViewRow row = dgvRecentRservation.Rows[e.RowIndex];
 
+                string info =
+                    "Reservation ID: " + row.Cells["reservation_id"].Value.ToString() + "\n" +
+                    "Room: " + row.Cells["room_number"].Value.ToString() + "\n" +
+                    "Check-in: " + row.Cells["check_in"].Value.ToString() + "\n" +
+                    "Check-out: " + row.Cells["check_out"].Value.ToString() + "\n" +
+                    "Status: " + row.Cells["status"].Value.ToString();
+
+                MessageBox.Show(info, "Reservation Details",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
         }
 
+       
         private void btnMyReservation_Click(object sender, EventArgs e)
         {
             UserDashboard reservation = new UserDashboard();
@@ -84,27 +175,18 @@ namespace Online_Hotel_Booking_Dashboards
 
         private void button5_Click(object sender, EventArgs e)
         {
-            {   
-            // Show a message box with Yes and No buttons
             DialogResult result = MessageBox.Show(
-                "Are you sure you want to logout?",  // Message text
-                "Logout Confirmation",               // Title
-                MessageBoxButtons.YesNo,             // Buttons
-                MessageBoxIcon.Question              // Icon
-            );
+                "Are you sure you want to logout?",
+                "Logout Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
-            // Check what the user clicked
             if (result == DialogResult.Yes)
             {
-                // User clicked Yes → go back to login form
                 LogIn loginForm = new LogIn();
                 loginForm.Show();
-
-                // Hide or close the current form (user dashboard)
                 this.Hide();
             }
-            // If No is clicked, nothing happens
         }
-    }
     }
 }

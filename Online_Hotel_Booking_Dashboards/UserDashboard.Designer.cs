@@ -107,7 +107,7 @@
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 346);
+            button5.Location = new Point(-34, 386);
             button5.Name = "button5";
             button5.Size = new Size(178, 44);
             button5.TabIndex = 15;
@@ -120,7 +120,7 @@
             btnMyProfile.FlatAppearance.BorderSize = 0;
             btnMyProfile.FlatStyle = FlatStyle.Flat;
             btnMyProfile.ForeColor = Color.White;
-            btnMyProfile.Location = new Point(0, 297);
+            btnMyProfile.Location = new Point(-34, 324);
             btnMyProfile.Name = "btnMyProfile";
             btnMyProfile.Size = new Size(178, 44);
             btnMyProfile.TabIndex = 14;
@@ -133,7 +133,7 @@
             btnMyQrCode.FlatAppearance.BorderSize = 0;
             btnMyQrCode.FlatStyle = FlatStyle.Flat;
             btnMyQrCode.ForeColor = Color.White;
-            btnMyQrCode.Location = new Point(1, 247);
+            btnMyQrCode.Location = new Point(-12, 261);
             btnMyQrCode.Name = "btnMyQrCode";
             btnMyQrCode.Size = new Size(178, 44);
             btnMyQrCode.TabIndex = 13;
@@ -146,7 +146,7 @@
             btnBookRoom.FlatAppearance.BorderSize = 0;
             btnBookRoom.FlatStyle = FlatStyle.Flat;
             btnBookRoom.ForeColor = Color.White;
-            btnBookRoom.Location = new Point(1, 197);
+            btnBookRoom.Location = new Point(-12, 206);
             btnBookRoom.Name = "btnBookRoom";
             btnBookRoom.Size = new Size(178, 44);
             btnBookRoom.TabIndex = 12;
@@ -188,6 +188,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(794, 48);
             panel2.TabIndex = 1;
+            panel2.Paint += panel2_Paint;
             // 
             // pictureBox5
             // 
