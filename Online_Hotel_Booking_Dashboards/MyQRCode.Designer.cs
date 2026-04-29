@@ -48,8 +48,8 @@
             label4 = new Label();
             label5 = new Label();
             panel4 = new Panel();
-            pictureBox2 = new PictureBox();
             button1 = new Button();
+            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -268,14 +268,6 @@
             panel4.Size = new Size(411, 405);
             panel4.TabIndex = 6;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Location = new Point(30, 17);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(353, 283);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            // 
             // button1
             // 
             button1.BackColor = Color.SteelBlue;
@@ -288,6 +280,14 @@
             button1.TabIndex = 1;
             button1.Text = "Download QR Code";
             button1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(30, 17);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(353, 283);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
             // 
             // MyQRCode
             // 
