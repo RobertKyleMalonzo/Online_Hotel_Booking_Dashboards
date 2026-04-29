@@ -46,7 +46,6 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             panel4 = new Panel();
-            cmbNumberGuest = new ComboBox();
             cmbRoomType = new ComboBox();
             dtpCheckOut = new DateTimePicker();
             dtpCheckIn = new DateTimePicker();
@@ -58,6 +57,7 @@
             label9 = new Label();
             label6 = new Label();
             label4 = new Label();
+            txtGuessLimit = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -249,7 +249,7 @@
             // panel4
             // 
             panel4.BackColor = Color.White;
-            panel4.Controls.Add(cmbNumberGuest);
+            panel4.Controls.Add(txtGuessLimit);
             panel4.Controls.Add(cmbRoomType);
             panel4.Controls.Add(dtpCheckOut);
             panel4.Controls.Add(dtpCheckIn);
@@ -264,15 +264,6 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(736, 351);
             panel4.TabIndex = 3;
-            // 
-            // cmbNumberGuest
-            // 
-            cmbNumberGuest.FormattingEnabled = true;
-            cmbNumberGuest.Items.AddRange(new object[] { "1 guest", "2 guest", "3 guest", "4 guest", "5 guest", "6 guest" });
-            cmbNumberGuest.Location = new Point(194, 211);
-            cmbNumberGuest.Name = "cmbNumberGuest";
-            cmbNumberGuest.Size = new Size(510, 28);
-            cmbNumberGuest.TabIndex = 19;
             // 
             // cmbRoomType
             // 
@@ -378,6 +369,13 @@
             label4.TabIndex = 0;
             label4.Text = "Book Room";
             // 
+            // txtGuessLimit
+            // 
+            txtGuessLimit.Location = new Point(194, 208);
+            txtGuessLimit.Name = "txtGuessLimit";
+            txtGuessLimit.Size = new Size(513, 27);
+            txtGuessLimit.TabIndex = 19;
+            // 
             // CustomerBookRoom
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -434,6 +432,6 @@
         private DateTimePicker dtpCheckOut;
         private DateTimePicker dtpCheckIn;
         private ComboBox cmbRoomType;
-        private ComboBox cmbNumberGuest;
+        private TextBox txtGuessLimit;
     }
 }
