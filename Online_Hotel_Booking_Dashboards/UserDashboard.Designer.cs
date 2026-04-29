@@ -175,9 +175,7 @@
             label7.Location = new Point(41, 120);
             label7.Name = "label7";
             label7.Size = new Size(103, 23);
-            label7.TabIndex = 10;
-            label7.Text = "My Account";
-            label7.Click += label7_Click;
+            label7.Text = "My Account";           
             // 
             // panel2
             // 
@@ -188,7 +186,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(794, 48);
             panel2.TabIndex = 1;
-            panel2.Paint += panel2_Paint;
             // 
             // pictureBox5
             // 
@@ -240,7 +237,6 @@
             lblTotalBooking.Size = new Size(40, 46);
             lblTotalBooking.TabIndex = 2;
             lblTotalBooking.Text = "0";
-            lblTotalBooking.Click += lblTotalBooking_Click;
             // 
             // label3
             // 
@@ -282,7 +278,6 @@
             lblUpcoming.Size = new Size(40, 46);
             lblUpcoming.TabIndex = 3;
             lblUpcoming.Text = "0";
-            lblUpcoming.Click += lblUpcoming_Click;
             // 
             // label4
             // 
@@ -324,7 +319,6 @@
             lblCheckIn.Size = new Size(40, 46);
             lblCheckIn.TabIndex = 4;
             lblCheckIn.Text = "0";
-            lblCheckIn.Click += lblCheckIn_Click;
             // 
             // label5
             // 
@@ -366,7 +360,6 @@
             lblCancelled.Size = new Size(40, 46);
             lblCancelled.TabIndex = 5;
             lblCancelled.Text = "0";
-            lblCancelled.Click += lblCancelled_Click;
             // 
             // label6
             // 
