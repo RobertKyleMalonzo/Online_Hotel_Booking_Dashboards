@@ -89,4 +89,49 @@ namespace Online_Hotel_Booking_Dashboards
                 MessageBoxIcon.Information
             );
         }
-    }}
+
+        private void btnMyReservation_Click(object sender, EventArgs e)
+        {
+            UserDashboard reservations = new UserDashboard();
+            reservations.Show();
+            this.Hide();
+        }
+
+        private void btnBookRoom_Click(object sender, EventArgs e)
+        {
+            CustomerBookRoom bookRoom = new CustomerBookRoom();
+            bookRoom.Show();
+            this.Hide();
+        }
+
+        private void btnMyQrCode_Click(object sender, EventArgs e)
+        {
+            MyQRCode qrCode = new MyQRCode();
+            qrCode.Show();
+            this.Hide();
+        }
+
+        private void btnMyProfile_Click(object sender, EventArgs e)
+        {
+            MyProfile profile = new MyProfile();
+            profile.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to logout?",
+                "Logout Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                LogIn loginForm = new LogIn();
+                loginForm.Show();
+                this.Hide();
+            }
+        }
+    }
+}

@@ -46,6 +46,7 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             panel4 = new Panel();
+            txtGuessLimit = new TextBox();
             cmbRoomType = new ComboBox();
             dtpCheckOut = new DateTimePicker();
             dtpCheckIn = new DateTimePicker();
@@ -57,7 +58,6 @@
             label9 = new Label();
             label6 = new Label();
             label4 = new Label();
-            txtGuessLimit = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -145,6 +145,7 @@
             button5.TabIndex = 15;
             button5.Text = "➜]  Logout";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // btnMyProfile
             // 
@@ -157,6 +158,7 @@
             btnMyProfile.TabIndex = 14;
             btnMyProfile.Text = "👤  Profile";
             btnMyProfile.UseVisualStyleBackColor = true;
+            btnMyProfile.Click += btnMyProfile_Click;
             // 
             // btnMyQrCode
             // 
@@ -169,6 +171,7 @@
             btnMyQrCode.TabIndex = 13;
             btnMyQrCode.Text = "⛶  My QR Code";
             btnMyQrCode.UseVisualStyleBackColor = true;
+            btnMyQrCode.Click += btnMyQrCode_Click;
             // 
             // btnBookRoom
             // 
@@ -181,6 +184,7 @@
             btnBookRoom.TabIndex = 12;
             btnBookRoom.Text = "🛏  Book Room";
             btnBookRoom.UseVisualStyleBackColor = true;
+            btnBookRoom.Click += btnBookRoom_Click;
             // 
             // btnMyReservation
             // 
@@ -193,6 +197,7 @@
             btnMyReservation.TabIndex = 11;
             btnMyReservation.Text = "📅  My Reservations";
             btnMyReservation.UseVisualStyleBackColor = true;
+            btnMyReservation.Click += btnMyReservation_Click;
             // 
             // label7
             // 
@@ -264,6 +269,13 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(736, 351);
             panel4.TabIndex = 3;
+            // 
+            // txtGuessLimit
+            // 
+            txtGuessLimit.Location = new Point(194, 208);
+            txtGuessLimit.Name = "txtGuessLimit";
+            txtGuessLimit.Size = new Size(513, 27);
+            txtGuessLimit.TabIndex = 19;
             // 
             // cmbRoomType
             // 
@@ -368,13 +380,6 @@
             label4.Size = new Size(135, 31);
             label4.TabIndex = 0;
             label4.Text = "Book Room";
-            // 
-            // txtGuessLimit
-            // 
-            txtGuessLimit.Location = new Point(194, 208);
-            txtGuessLimit.Name = "txtGuessLimit";
-            txtGuessLimit.Size = new Size(513, 27);
-            txtGuessLimit.TabIndex = 19;
             // 
             // CustomerBookRoom
             // 
