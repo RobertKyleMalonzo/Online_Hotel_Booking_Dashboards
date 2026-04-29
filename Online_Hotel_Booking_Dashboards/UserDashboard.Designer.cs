@@ -58,10 +58,10 @@
             lblCancelled = new Label();
             label6 = new Label();
             panel7 = new Panel();
+            dgvRecentRservation = new DataGridView();
             btnViewQRCode = new Button();
             label11 = new Label();
             label1 = new Label();
-            dgvRecentRservation = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel2.SuspendLayout();
@@ -396,6 +396,16 @@
             panel7.Size = new Size(731, 362);
             panel7.TabIndex = 6;
             // 
+            // dgvRecentRservation
+            // 
+            dgvRecentRservation.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRecentRservation.Location = new Point(26, 57);
+            dgvRecentRservation.Name = "dgvRecentRservation";
+            dgvRecentRservation.RowHeadersWidth = 51;
+            dgvRecentRservation.Size = new Size(683, 242);
+            dgvRecentRservation.TabIndex = 10;
+            dgvRecentRservation.CellContentClick += dgvRecentRservation_CellContentClick;
+            // 
             // btnViewQRCode
             // 
             btnViewQRCode.BackColor = Color.RoyalBlue;
@@ -429,16 +439,6 @@
             label1.Size = new Size(116, 20);
             label1.TabIndex = 7;
             label1.Text = "My Reservation";
-            // 
-            // dgvRecentRservation
-            // 
-            dgvRecentRservation.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRecentRservation.Location = new Point(26, 57);
-            dgvRecentRservation.Name = "dgvRecentRservation";
-            dgvRecentRservation.RowHeadersWidth = 51;
-            dgvRecentRservation.Size = new Size(683, 242);
-            dgvRecentRservation.TabIndex = 10;
-            dgvRecentRservation.CellContentClick += dgvRecentRservation_CellContentClick;
             // 
             // UserDashboard
             // 
