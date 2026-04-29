@@ -180,7 +180,7 @@ namespace Online_Hotel_Booking_Dashboards
                 "Logout Confirmation",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
-
+            
             if (result == DialogResult.Yes)
             {
                 LogIn loginForm = new LogIn();
