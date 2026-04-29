@@ -442,6 +442,7 @@
             Controls.Add(panel1);
             Name = "UserDashboard";
             Text = "UserDashboard";
+            Load += UserDashboard_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();

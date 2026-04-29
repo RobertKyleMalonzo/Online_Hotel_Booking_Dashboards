@@ -144,7 +144,7 @@ namespace Online_Hotel_Booking_Dashboards
             }
         }
 
-       
+
         private void btnMyReservation_Click(object sender, EventArgs e)
         {
             UserDashboard reservation = new UserDashboard();
@@ -180,13 +180,18 @@ namespace Online_Hotel_Booking_Dashboards
                 "Logout Confirmation",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
-            
+
             if (result == DialogResult.Yes)
             {
                 LogIn loginForm = new LogIn();
                 loginForm.Show();
                 this.Hide();
             }
+        }
+
+        private void UserDashboard_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
