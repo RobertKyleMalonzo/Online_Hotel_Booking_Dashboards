@@ -61,7 +61,6 @@
             btnViewQRCode = new Button();
             label11 = new Label();
             label1 = new Label();
-            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel2.SuspendLayout();
@@ -381,7 +380,6 @@
             // panel7
             // 
             panel7.BackColor = Color.White;
-            panel7.Controls.Add(button1);
             panel7.Controls.Add(dgvRecentRservation);
             panel7.Controls.Add(btnViewQRCode);
             panel7.Controls.Add(label11);
@@ -433,15 +431,6 @@
             label1.Size = new Size(116, 20);
             label1.TabIndex = 7;
             label1.Text = "My Reservation";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(501, 28);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 11;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // UserDashboard
             // 
@@ -517,6 +506,5 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private DataGridView dgvRecentRservation;
-        private Button button1;
     }
 }
