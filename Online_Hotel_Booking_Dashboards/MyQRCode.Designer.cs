@@ -49,7 +49,7 @@
             label5 = new Label();
             panel4 = new Panel();
             button1 = new Button();
-            pictureBox2 = new PictureBox();
+            pictureBoxQRCode = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -57,7 +57,7 @@
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQRCode).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -138,6 +138,7 @@
             button5.TabIndex = 15;
             button5.Text = "➜]  Logout";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // btnMyProfile
             // 
@@ -150,6 +151,7 @@
             btnMyProfile.TabIndex = 14;
             btnMyProfile.Text = "👤  Profile";
             btnMyProfile.UseVisualStyleBackColor = true;
+            btnMyProfile.Click += btnMyProfile_Click;
             // 
             // btnMyQrCode
             // 
@@ -162,6 +164,7 @@
             btnMyQrCode.TabIndex = 13;
             btnMyQrCode.Text = "⛶  My QR Code";
             btnMyQrCode.UseVisualStyleBackColor = true;
+            btnMyQrCode.Click += btnMyQrCode_Click;
             // 
             // btnBookRoom
             // 
@@ -174,6 +177,7 @@
             btnBookRoom.TabIndex = 12;
             btnBookRoom.Text = "🛏  Book Room";
             btnBookRoom.UseVisualStyleBackColor = true;
+            btnBookRoom.Click += btnBookRoom_Click;
             // 
             // btnMyReservation
             // 
@@ -186,6 +190,7 @@
             btnMyReservation.TabIndex = 11;
             btnMyReservation.Text = "📅  My Reservations";
             btnMyReservation.UseVisualStyleBackColor = true;
+            btnMyReservation.Click += btnMyReservation_Click;
             // 
             // label7
             // 
@@ -262,7 +267,7 @@
             // 
             panel4.BackColor = Color.White;
             panel4.Controls.Add(button1);
-            panel4.Controls.Add(pictureBox2);
+            panel4.Controls.Add(pictureBoxQRCode);
             panel4.Location = new Point(338, 133);
             panel4.Name = "panel4";
             panel4.Size = new Size(411, 405);
@@ -281,13 +286,13 @@
             button1.Text = "Download QR Code";
             button1.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
+            // pictureBoxQRCode
             // 
-            pictureBox2.Location = new Point(30, 17);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(353, 283);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
+            pictureBoxQRCode.Location = new Point(30, 17);
+            pictureBoxQRCode.Name = "pictureBoxQRCode";
+            pictureBoxQRCode.Size = new Size(353, 283);
+            pictureBoxQRCode.TabIndex = 0;
+            pictureBoxQRCode.TabStop = false;
             // 
             // MyQRCode
             // 
@@ -311,7 +316,7 @@
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQRCode).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -338,6 +343,6 @@
         private Label label5;
         private Panel panel4;
         private Button button1;
-        private PictureBox pictureBox2;
+        private PictureBox pictureBoxQRCode;
     }
 }
