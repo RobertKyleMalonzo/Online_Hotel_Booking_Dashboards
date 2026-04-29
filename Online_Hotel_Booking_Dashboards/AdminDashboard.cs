@@ -16,5 +16,20 @@ namespace Online_Hotel_Booking_Dashboards
         {
             InitializeComponent();
         }
+
+        private void btnReservation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

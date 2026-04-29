@@ -31,15 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             panel1 = new Panel();
             panel2 = new Panel();
-            lblUser = new Label();
             pictureBox5 = new PictureBox();
             label2 = new Label();
             pictureBox6 = new PictureBox();
             button5 = new Button();
-            btnMyProfile = new Button();
-            btnMyQrCode = new Button();
-            btnBookRoom = new Button();
-            btnMyReservation = new Button();
+            btnStaff = new Button();
+            btnUsers = new Button();
+            btnReservation = new Button();
+            btnRooms = new Button();
             label7 = new Label();
             label4 = new Label();
             panel6 = new Panel();
@@ -62,6 +61,8 @@
             dgvRecentRservation = new DataGridView();
             btnViewQRCode = new Button();
             label11 = new Label();
+            btnPayments = new Button();
+            btnReports = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -81,45 +82,36 @@
             // panel1
             // 
             panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(btnReports);
+            panel1.Controls.Add(btnPayments);
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(button5);
-            panel1.Controls.Add(btnMyProfile);
-            panel1.Controls.Add(btnMyQrCode);
-            panel1.Controls.Add(btnBookRoom);
-            panel1.Controls.Add(btnMyReservation);
+            panel1.Controls.Add(btnStaff);
+            panel1.Controls.Add(btnUsers);
+            panel1.Controls.Add(btnReservation);
+            panel1.Controls.Add(btnRooms);
             panel1.Controls.Add(label7);
             panel1.Location = new Point(-4, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(211, 578);
+            panel1.Size = new Size(211, 620);
             panel1.TabIndex = 2;
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(lblUser);
             panel2.Controls.Add(pictureBox5);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(213, 0);
+            panel2.Location = new Point(206, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(812, 49);
+            panel2.Size = new Size(839, 57);
             panel2.TabIndex = 2;
-            // 
-            // lblUser
-            // 
-            lblUser.AutoSize = true;
-            lblUser.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUser.Location = new Point(680, 12);
-            lblUser.Name = "lblUser";
-            lblUser.Size = new Size(40, 20);
-            lblUser.TabIndex = 2;
-            lblUser.Text = "User";
             // 
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(545, 3);
+            pictureBox5.Location = new Point(610, 3);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(50, 40);
+            pictureBox5.Size = new Size(44, 45);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 1;
             pictureBox5.TabStop = false;
@@ -127,19 +119,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(601, 12);
+            label2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(660, 12);
             label2.Name = "label2";
-            label2.Size = new Size(80, 20);
+            label2.Size = new Size(165, 25);
             label2.TabIndex = 0;
-            label2.Text = "Welcome, ";
+            label2.Text = "Welcome, Admin!";
+            label2.Click += label2_Click;
             // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(41, 9);
+            pictureBox6.Location = new Point(30, 12);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(103, 105);
+            pictureBox6.Size = new Size(137, 128);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 16;
             pictureBox6.TabStop = false;
@@ -149,67 +142,73 @@
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 346);
+            button5.Location = new Point(16, 502);
             button5.Name = "button5";
-            button5.Size = new Size(178, 44);
+            button5.Size = new Size(200, 46);
             button5.TabIndex = 15;
             button5.Text = "➜]  Logout";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
             button5.UseVisualStyleBackColor = true;
             // 
-            // btnMyProfile
+            // btnStaff
             // 
-            btnMyProfile.FlatAppearance.BorderSize = 0;
-            btnMyProfile.FlatStyle = FlatStyle.Flat;
-            btnMyProfile.ForeColor = Color.White;
-            btnMyProfile.Location = new Point(0, 297);
-            btnMyProfile.Name = "btnMyProfile";
-            btnMyProfile.Size = new Size(178, 44);
-            btnMyProfile.TabIndex = 14;
-            btnMyProfile.Text = "👤  Profile";
-            btnMyProfile.UseVisualStyleBackColor = true;
+            btnStaff.FlatAppearance.BorderSize = 0;
+            btnStaff.FlatStyle = FlatStyle.Flat;
+            btnStaff.ForeColor = Color.White;
+            btnStaff.Location = new Point(16, 346);
+            btnStaff.Name = "btnStaff";
+            btnStaff.Size = new Size(200, 46);
+            btnStaff.TabIndex = 14;
+            btnStaff.Text = "👤  Staff";
+            btnStaff.TextAlign = ContentAlignment.MiddleLeft;
+            btnStaff.UseVisualStyleBackColor = true;
             // 
-            // btnMyQrCode
+            // btnUsers
             // 
-            btnMyQrCode.FlatAppearance.BorderSize = 0;
-            btnMyQrCode.FlatStyle = FlatStyle.Flat;
-            btnMyQrCode.ForeColor = Color.White;
-            btnMyQrCode.Location = new Point(1, 247);
-            btnMyQrCode.Name = "btnMyQrCode";
-            btnMyQrCode.Size = new Size(178, 44);
-            btnMyQrCode.TabIndex = 13;
-            btnMyQrCode.Text = "⛶  My QR Code";
-            btnMyQrCode.UseVisualStyleBackColor = true;
+            btnUsers.FlatAppearance.BorderSize = 0;
+            btnUsers.FlatStyle = FlatStyle.Flat;
+            btnUsers.ForeColor = Color.White;
+            btnUsers.Location = new Point(16, 294);
+            btnUsers.Name = "btnUsers";
+            btnUsers.Size = new Size(200, 46);
+            btnUsers.TabIndex = 13;
+            btnUsers.Text = "👤  Users";
+            btnUsers.TextAlign = ContentAlignment.MiddleLeft;
+            btnUsers.UseVisualStyleBackColor = true;
             // 
-            // btnBookRoom
+            // btnReservation
             // 
-            btnBookRoom.FlatAppearance.BorderSize = 0;
-            btnBookRoom.FlatStyle = FlatStyle.Flat;
-            btnBookRoom.ForeColor = Color.White;
-            btnBookRoom.Location = new Point(1, 197);
-            btnBookRoom.Name = "btnBookRoom";
-            btnBookRoom.Size = new Size(178, 44);
-            btnBookRoom.TabIndex = 12;
-            btnBookRoom.Text = "🛏  Book Room";
-            btnBookRoom.UseVisualStyleBackColor = true;
+            btnReservation.FlatAppearance.BorderSize = 0;
+            btnReservation.FlatStyle = FlatStyle.Flat;
+            btnReservation.ForeColor = Color.White;
+            btnReservation.Location = new Point(16, 242);
+            btnReservation.Name = "btnReservation";
+            btnReservation.Size = new Size(200, 46);
+            btnReservation.TabIndex = 12;
+            btnReservation.Text = "📅  Reservations";
+            btnReservation.TextAlign = ContentAlignment.MiddleLeft;
+            btnReservation.UseVisualStyleBackColor = true;
+            btnReservation.Click += btnReservation_Click;
             // 
-            // btnMyReservation
+            // btnRooms
             // 
-            btnMyReservation.FlatAppearance.BorderSize = 0;
-            btnMyReservation.FlatStyle = FlatStyle.Flat;
-            btnMyReservation.ForeColor = Color.White;
-            btnMyReservation.Location = new Point(1, 149);
-            btnMyReservation.Name = "btnMyReservation";
-            btnMyReservation.Size = new Size(178, 44);
-            btnMyReservation.TabIndex = 11;
-            btnMyReservation.Text = "📅  My Reservations";
-            btnMyReservation.UseVisualStyleBackColor = true;
+            btnRooms.FlatAppearance.BorderSize = 0;
+            btnRooms.FlatStyle = FlatStyle.Flat;
+            btnRooms.ForeColor = Color.White;
+            btnRooms.Location = new Point(16, 190);
+            btnRooms.Name = "btnRooms";
+            btnRooms.Size = new Size(200, 46);
+            btnRooms.TabIndex = 11;
+            btnRooms.Text = "🛏  Rooms";
+            btnRooms.TextAlign = ContentAlignment.MiddleLeft;
+            btnRooms.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(41, 120);
+            label7.Location = new Point(45, 149);
             label7.Name = "label7";
             label7.Size = new Size(103, 23);
             label7.TabIndex = 10;
@@ -219,7 +218,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(213, 71);
+            label4.Location = new Point(244, 75);
             label4.Name = "label4";
             label4.RightToLeft = RightToLeft.Yes;
             label4.Size = new Size(116, 20);
@@ -232,9 +231,9 @@
             panel6.Controls.Add(pictureBox4);
             panel6.Controls.Add(lblCancelled);
             panel6.Controls.Add(label6);
-            panel6.Location = new Point(795, 98);
+            panel6.Location = new Point(823, 98);
             panel6.Name = "panel6";
-            panel6.Size = new Size(156, 99);
+            panel6.Size = new Size(172, 99);
             panel6.TabIndex = 17;
             // 
             // pictureBox4
@@ -273,10 +272,11 @@
             panel5.Controls.Add(pictureBox3);
             panel5.Controls.Add(lblCheckIn);
             panel5.Controls.Add(label5);
-            panel5.Location = new Point(617, 98);
+            panel5.Location = new Point(629, 98);
             panel5.Name = "panel5";
-            panel5.Size = new Size(156, 99);
+            panel5.Size = new Size(172, 99);
             panel5.TabIndex = 16;
+            panel5.Paint += panel5_Paint;
             // 
             // pictureBox3
             // 
@@ -314,9 +314,9 @@
             panel4.Controls.Add(pictureBox2);
             panel4.Controls.Add(lblUpcoming);
             panel4.Controls.Add(label8);
-            panel4.Location = new Point(438, 98);
+            panel4.Location = new Point(437, 98);
             panel4.Name = "panel4";
-            panel4.Size = new Size(156, 99);
+            panel4.Size = new Size(172, 99);
             panel4.TabIndex = 15;
             // 
             // pictureBox2
@@ -355,9 +355,9 @@
             panel8.Controls.Add(pictureBox7);
             panel8.Controls.Add(lblTotalBooking);
             panel8.Controls.Add(label9);
-            panel8.Location = new Point(262, 98);
+            panel8.Location = new Point(244, 98);
             panel8.Name = "panel8";
-            panel8.Size = new Size(156, 99);
+            panel8.Size = new Size(172, 99);
             panel8.TabIndex = 14;
             // 
             // pictureBox7
@@ -396,18 +396,18 @@
             panel7.Controls.Add(dgvRecentRservation);
             panel7.Controls.Add(btnViewQRCode);
             panel7.Controls.Add(label11);
-            panel7.Location = new Point(243, 206);
+            panel7.Location = new Point(244, 222);
             panel7.Name = "panel7";
-            panel7.Size = new Size(731, 362);
+            panel7.Size = new Size(751, 362);
             panel7.TabIndex = 19;
             // 
             // dgvRecentRservation
             // 
             dgvRecentRservation.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRecentRservation.Location = new Point(26, 57);
+            dgvRecentRservation.Location = new Point(29, 58);
             dgvRecentRservation.Name = "dgvRecentRservation";
             dgvRecentRservation.RowHeadersWidth = 51;
-            dgvRecentRservation.Size = new Size(683, 242);
+            dgvRecentRservation.Size = new Size(695, 242);
             dgvRecentRservation.TabIndex = 10;
             // 
             // btnViewQRCode
@@ -416,7 +416,7 @@
             btnViewQRCode.FlatAppearance.BorderSize = 0;
             btnViewQRCode.FlatStyle = FlatStyle.Flat;
             btnViewQRCode.ForeColor = Color.White;
-            btnViewQRCode.Location = new Point(260, 315);
+            btnViewQRCode.Location = new Point(266, 316);
             btnViewQRCode.Name = "btnViewQRCode";
             btnViewQRCode.Size = new Size(225, 31);
             btnViewQRCode.TabIndex = 8;
@@ -433,11 +433,37 @@
             label11.TabIndex = 6;
             label11.Text = "Recent Reservation";
             // 
+            // btnPayments
+            // 
+            btnPayments.FlatAppearance.BorderSize = 0;
+            btnPayments.FlatStyle = FlatStyle.Flat;
+            btnPayments.ForeColor = Color.White;
+            btnPayments.Location = new Point(16, 398);
+            btnPayments.Name = "btnPayments";
+            btnPayments.Size = new Size(200, 46);
+            btnPayments.TabIndex = 17;
+            btnPayments.Text = "💳  Payments";
+            btnPayments.TextAlign = ContentAlignment.MiddleLeft;
+            btnPayments.UseVisualStyleBackColor = true;
+            // 
+            // btnReports
+            // 
+            btnReports.FlatAppearance.BorderSize = 0;
+            btnReports.FlatStyle = FlatStyle.Flat;
+            btnReports.ForeColor = Color.White;
+            btnReports.Location = new Point(16, 450);
+            btnReports.Name = "btnReports";
+            btnReports.Size = new Size(200, 46);
+            btnReports.TabIndex = 18;
+            btnReports.Text = "📊  Reports";
+            btnReports.TextAlign = ContentAlignment.MiddleLeft;
+            btnReports.UseVisualStyleBackColor = true;
+            // 
             // AdminDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1021, 580);
+            ClientSize = new Size(1043, 603);
             Controls.Add(panel7);
             Controls.Add(label4);
             Controls.Add(panel6);
@@ -477,15 +503,14 @@
 
         private Panel panel1;
         private Panel panel2;
-        private Label lblUser;
         private PictureBox pictureBox5;
         private Label label2;
         private PictureBox pictureBox6;
         private Button button5;
-        private Button btnMyProfile;
-        private Button btnMyQrCode;
-        private Button btnBookRoom;
-        private Button btnMyReservation;
+        private Button btnStaff;
+        private Button btnUsers;
+        private Button btnReservation;
+        private Button btnRooms;
         private Label label7;
         private Label label4;
         private Panel panel6;
@@ -508,5 +533,7 @@
         private DataGridView dgvRecentRservation;
         private Button btnViewQRCode;
         private Label label11;
+        private Button btnReports;
+        private Button btnPayments;
     }
 }
