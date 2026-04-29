@@ -281,6 +281,7 @@
             pictureBoxQRCode.Size = new Size(353, 283);
             pictureBoxQRCode.TabIndex = 0;
             pictureBoxQRCode.TabStop = false;
+            pictureBoxQRCode.Click += pictureBoxQRCode_Click;
             // 
             // MyQRCode
             // 

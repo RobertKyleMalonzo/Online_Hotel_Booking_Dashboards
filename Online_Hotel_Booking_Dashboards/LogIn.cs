@@ -152,5 +152,10 @@ namespace Online_Hotel_Booking_Dashboards
         {
 
         }
+
+        private void chkShowPassword_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

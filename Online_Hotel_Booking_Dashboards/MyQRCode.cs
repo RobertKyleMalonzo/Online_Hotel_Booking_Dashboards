@@ -123,5 +123,10 @@ namespace Online_Hotel_Booking_Dashboards
                 this.Hide();
             }
         }
+
+        private void pictureBoxQRCode_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
