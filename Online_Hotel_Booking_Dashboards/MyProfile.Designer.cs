@@ -42,7 +42,6 @@
             btnMyReservation = new Button();
             label7 = new Label();
             panel3 = new Panel();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
@@ -209,23 +208,12 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(label3);
             panel3.Location = new Point(183, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(794, 48);
             panel3.TabIndex = 4;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(680, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(40, 20);
-            label1.TabIndex = 2;
-            label1.Text = "User";
             // 
             // pictureBox1
             // 
@@ -243,9 +231,9 @@
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(601, 12);
             label3.Name = "label3";
-            label3.Size = new Size(80, 20);
+            label3.Size = new Size(145, 20);
             label3.TabIndex = 0;
-            label3.Text = "Welcome, ";
+            label3.Text = "Welcome, Customer";
             // 
             // label4
             // 
@@ -439,7 +427,6 @@
         private Button btnMyReservation;
         private Label label7;
         private Panel panel3;
-        private Label label1;
         private PictureBox pictureBox1;
         private Label label3;
         private Label label4;
