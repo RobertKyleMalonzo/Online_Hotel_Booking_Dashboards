@@ -17,6 +17,8 @@ namespace Online_Hotel_Booking_Dashboards
             InitializeComponent();
         }
 
+
+
         private void label7_Click(object sender, EventArgs e)
         {
 
