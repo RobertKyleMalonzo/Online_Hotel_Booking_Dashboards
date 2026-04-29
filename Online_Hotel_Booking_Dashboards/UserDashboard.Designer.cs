@@ -1,0 +1,526 @@
+﻿namespace Online_Hotel_Booking_Dashboards
+{
+    partial class UserDashboard
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDashboard));
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            panel7 = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            lblTotalBooking = new Label();
+            lblUpcoming = new Label();
+            lblCheckIn = new Label();
+            lblCancelled = new Label();
+            label11 = new Label();
+            panel8 = new Panel();
+            btnViewQRCode = new Button();
+            btnViewDetails = new Button();
+            label7 = new Label();
+            btnMyReservation = new Button();
+            btnBookRoom = new Button();
+            btnMyQrCode = new Button();
+            btnMyProfile = new Button();
+            button5 = new Button();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            lblUser = new Label();
+            pictureBox6 = new PictureBox();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(pictureBox6);
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(btnMyProfile);
+            panel1.Controls.Add(btnMyQrCode);
+            panel1.Controls.Add(btnBookRoom);
+            panel1.Controls.Add(btnMyReservation);
+            panel1.Controls.Add(label7);
+            panel1.Location = new Point(0, 1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(181, 565);
+            panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.White;
+            panel2.Controls.Add(lblUser);
+            panel2.Controls.Add(pictureBox5);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(183, 1);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(794, 48);
+            panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.White;
+            panel3.Controls.Add(pictureBox1);
+            panel3.Controls.Add(lblTotalBooking);
+            panel3.Controls.Add(label3);
+            panel3.Location = new Point(243, 75);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(156, 99);
+            panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.White;
+            panel4.Controls.Add(pictureBox2);
+            panel4.Controls.Add(lblUpcoming);
+            panel4.Controls.Add(label4);
+            panel4.Location = new Point(414, 75);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(156, 99);
+            panel4.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.White;
+            panel5.Controls.Add(pictureBox3);
+            panel5.Controls.Add(lblCheckIn);
+            panel5.Controls.Add(label5);
+            panel5.Location = new Point(585, 75);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(156, 99);
+            panel5.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.White;
+            panel6.Controls.Add(pictureBox4);
+            panel6.Controls.Add(lblCancelled);
+            panel6.Controls.Add(label6);
+            panel6.Location = new Point(757, 75);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(156, 99);
+            panel6.TabIndex = 5;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.White;
+            panel7.Controls.Add(btnViewDetails);
+            panel7.Controls.Add(btnViewQRCode);
+            panel7.Controls.Add(panel8);
+            panel7.Controls.Add(label11);
+            panel7.Location = new Point(214, 188);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(731, 362);
+            panel7.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(202, 52);
+            label1.Name = "label1";
+            label1.RightToLeft = RightToLeft.Yes;
+            label1.Size = new Size(116, 20);
+            label1.TabIndex = 7;
+            label1.Text = "My Reservation";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(601, 12);
+            label2.Name = "label2";
+            label2.Size = new Size(80, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Welcome, ";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(44, 3);
+            label3.Name = "label3";
+            label3.Size = new Size(109, 20);
+            label3.TabIndex = 1;
+            label3.Text = "Total Bookings";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(73, 3);
+            label4.Name = "label4";
+            label4.Size = new Size(80, 20);
+            label4.TabIndex = 2;
+            label4.Text = "Upcoming";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(79, 3);
+            label5.Name = "label5";
+            label5.Size = new Size(68, 20);
+            label5.TabIndex = 3;
+            label5.Text = "Check-in";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(78, 3);
+            label6.Name = "label6";
+            label6.Size = new Size(75, 20);
+            label6.TabIndex = 4;
+            label6.Text = "Cancelled";
+            // 
+            // lblTotalBooking
+            // 
+            lblTotalBooking.AutoSize = true;
+            lblTotalBooking.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalBooking.Location = new Point(95, 37);
+            lblTotalBooking.Name = "lblTotalBooking";
+            lblTotalBooking.Size = new Size(20, 23);
+            lblTotalBooking.TabIndex = 2;
+            lblTotalBooking.Text = "0";
+            // 
+            // lblUpcoming
+            // 
+            lblUpcoming.AutoSize = true;
+            lblUpcoming.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUpcoming.Location = new Point(102, 37);
+            lblUpcoming.Name = "lblUpcoming";
+            lblUpcoming.Size = new Size(20, 23);
+            lblUpcoming.TabIndex = 3;
+            lblUpcoming.Text = "0";
+            // 
+            // lblCheckIn
+            // 
+            lblCheckIn.AutoSize = true;
+            lblCheckIn.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCheckIn.Location = new Point(102, 37);
+            lblCheckIn.Name = "lblCheckIn";
+            lblCheckIn.Size = new Size(20, 23);
+            lblCheckIn.TabIndex = 4;
+            lblCheckIn.Text = "0";
+            // 
+            // lblCancelled
+            // 
+            lblCancelled.AutoSize = true;
+            lblCancelled.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCancelled.Location = new Point(106, 37);
+            lblCancelled.Name = "lblCancelled";
+            lblCancelled.Size = new Size(20, 23);
+            lblCancelled.TabIndex = 5;
+            lblCancelled.Text = "0";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(29, 19);
+            label11.Name = "label11";
+            label11.Size = new Size(159, 23);
+            label11.TabIndex = 6;
+            label11.Text = "Recent Reservation";
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.Silver;
+            panel8.Location = new Point(30, 54);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(669, 260);
+            panel8.TabIndex = 7;
+            // 
+            // btnViewQRCode
+            // 
+            btnViewQRCode.BackColor = Color.RoyalBlue;
+            btnViewQRCode.FlatAppearance.BorderSize = 0;
+            btnViewQRCode.FlatStyle = FlatStyle.Flat;
+            btnViewQRCode.ForeColor = Color.White;
+            btnViewQRCode.Location = new Point(107, 320);
+            btnViewQRCode.Name = "btnViewQRCode";
+            btnViewQRCode.Size = new Size(225, 31);
+            btnViewQRCode.TabIndex = 8;
+            btnViewQRCode.Text = "View QR Code";
+            btnViewQRCode.UseVisualStyleBackColor = false;
+            // 
+            // btnViewDetails
+            // 
+            btnViewDetails.BackColor = Color.RoyalBlue;
+            btnViewDetails.FlatAppearance.BorderSize = 0;
+            btnViewDetails.FlatStyle = FlatStyle.Flat;
+            btnViewDetails.ForeColor = Color.White;
+            btnViewDetails.Location = new Point(371, 320);
+            btnViewDetails.Name = "btnViewDetails";
+            btnViewDetails.Size = new Size(225, 31);
+            btnViewDetails.TabIndex = 9;
+            btnViewDetails.Text = "View Details";
+            btnViewDetails.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(41, 120);
+            label7.Name = "label7";
+            label7.Size = new Size(103, 23);
+            label7.TabIndex = 10;
+            label7.Text = "My Account";
+            label7.Click += label7_Click;
+            // 
+            // btnMyReservation
+            // 
+            btnMyReservation.FlatAppearance.BorderSize = 0;
+            btnMyReservation.FlatStyle = FlatStyle.Flat;
+            btnMyReservation.ForeColor = Color.White;
+            btnMyReservation.Location = new Point(1, 149);
+            btnMyReservation.Name = "btnMyReservation";
+            btnMyReservation.Size = new Size(178, 44);
+            btnMyReservation.TabIndex = 11;
+            btnMyReservation.Text = "📅  My Reservations";
+            btnMyReservation.UseVisualStyleBackColor = true;
+            // 
+            // btnBookRoom
+            // 
+            btnBookRoom.FlatAppearance.BorderSize = 0;
+            btnBookRoom.FlatStyle = FlatStyle.Flat;
+            btnBookRoom.ForeColor = Color.White;
+            btnBookRoom.Location = new Point(1, 197);
+            btnBookRoom.Name = "btnBookRoom";
+            btnBookRoom.Size = new Size(178, 44);
+            btnBookRoom.TabIndex = 12;
+            btnBookRoom.Text = "🛏  Book Room";
+            btnBookRoom.UseVisualStyleBackColor = true;
+            // 
+            // btnMyQrCode
+            // 
+            btnMyQrCode.FlatAppearance.BorderSize = 0;
+            btnMyQrCode.FlatStyle = FlatStyle.Flat;
+            btnMyQrCode.ForeColor = Color.White;
+            btnMyQrCode.Location = new Point(1, 247);
+            btnMyQrCode.Name = "btnMyQrCode";
+            btnMyQrCode.Size = new Size(178, 44);
+            btnMyQrCode.TabIndex = 13;
+            btnMyQrCode.Text = "⛶  My QR Code";
+            btnMyQrCode.UseVisualStyleBackColor = true;
+            // 
+            // btnMyProfile
+            // 
+            btnMyProfile.FlatAppearance.BorderSize = 0;
+            btnMyProfile.FlatStyle = FlatStyle.Flat;
+            btnMyProfile.ForeColor = Color.White;
+            btnMyProfile.Location = new Point(0, 297);
+            btnMyProfile.Name = "btnMyProfile";
+            btnMyProfile.Size = new Size(178, 44);
+            btnMyProfile.TabIndex = 14;
+            btnMyProfile.Text = "👤  Profile";
+            btnMyProfile.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(0, 346);
+            button5.Name = "button5";
+            button5.Size = new Size(178, 44);
+            button5.TabIndex = 15;
+            button5.Text = "➜]  Logout";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(16, 26);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(56, 55);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(15, 26);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(58, 55);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(17, 26);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(56, 55);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 5;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(18, 26);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(56, 55);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 6;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(545, 3);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(50, 40);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 1;
+            pictureBox5.TabStop = false;
+            // 
+            // lblUser
+            // 
+            lblUser.AutoSize = true;
+            lblUser.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUser.Location = new Point(680, 12);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(40, 20);
+            lblUser.TabIndex = 2;
+            lblUser.Text = "User";
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(41, 9);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(103, 105);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 16;
+            pictureBox6.TabStop = false;
+            // 
+            // UserDashboard
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(969, 562);
+            Controls.Add(label1);
+            Controls.Add(panel7);
+            Controls.Add(panel6);
+            Controls.Add(panel5);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Name = "UserDashboard";
+            Text = "UserDashboard";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Panel panel7;
+        private Label label1;
+        private Label lblTotalBooking;
+        private Label lblUpcoming;
+        private Label lblCheckIn;
+        private Label lblCancelled;
+        private Label label6;
+        private Panel panel8;
+        private Label label11;
+        private Button btnViewDetails;
+        private Button btnViewQRCode;
+        private Label label7;
+        private Button button5;
+        private Button btnMyProfile;
+        private Button btnMyQrCode;
+        private Button btnBookRoom;
+        private Button btnMyReservation;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
+        private Label lblUser;
+    }
+}
