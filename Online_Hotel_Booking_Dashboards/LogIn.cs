@@ -29,7 +29,7 @@ namespace Online_Hotel_Booking_Dashboards
 
         private void button2_Click(object sender, EventArgs e)
         {
-          
+
 
         }
 
@@ -120,7 +120,7 @@ namespace Online_Hotel_Booking_Dashboards
                 dB.Close();
             }
         }
-        
+
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
@@ -136,6 +136,16 @@ namespace Online_Hotel_Booking_Dashboards
                 txtPassword.PasswordChar = '*';
                 txtPassword.UseSystemPasswordChar = true;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
