@@ -38,7 +38,6 @@
             btnMyReservation = new Button();
             label7 = new Label();
             panel2 = new Panel();
-            lblUser = new Label();
             pictureBox5 = new PictureBox();
             label2 = new Label();
             panel3 = new Panel();
@@ -114,6 +113,7 @@
             button5.TabIndex = 15;
             button5.Text = "➜]  Logout";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // btnMyProfile
             // 
@@ -126,6 +126,7 @@
             btnMyProfile.TabIndex = 14;
             btnMyProfile.Text = "👤  Profile";
             btnMyProfile.UseVisualStyleBackColor = true;
+            btnMyProfile.Click += btnMyProfile_Click;
             // 
             // btnMyQrCode
             // 
@@ -138,6 +139,7 @@
             btnMyQrCode.TabIndex = 13;
             btnMyQrCode.Text = "⛶  My QR Code";
             btnMyQrCode.UseVisualStyleBackColor = true;
+            btnMyQrCode.Click += btnMyQrCode_Click;
             // 
             // btnBookRoom
             // 
@@ -150,6 +152,7 @@
             btnBookRoom.TabIndex = 12;
             btnBookRoom.Text = "🛏  Book Room";
             btnBookRoom.UseVisualStyleBackColor = true;
+            btnBookRoom.Click += btnBookRoom_Click;
             // 
             // btnMyReservation
             // 
@@ -162,6 +165,7 @@
             btnMyReservation.TabIndex = 11;
             btnMyReservation.Text = "📅  My Reservations";
             btnMyReservation.UseVisualStyleBackColor = true;
+            btnMyReservation.Click += btnMyReservation_Click;
             // 
             // label7
             // 
@@ -178,24 +182,12 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(lblUser);
             panel2.Controls.Add(pictureBox5);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(183, 1);
             panel2.Name = "panel2";
             panel2.Size = new Size(794, 48);
             panel2.TabIndex = 1;
-            // 
-            // lblUser
-            // 
-            lblUser.AutoSize = true;
-            lblUser.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUser.Location = new Point(680, 12);
-            lblUser.Name = "lblUser";
-            lblUser.Size = new Size(40, 20);
-            lblUser.TabIndex = 2;
-            lblUser.Text = "User";
-            lblUser.Click += lblUser_Click;
             // 
             // pictureBox5
             // 
@@ -213,9 +205,9 @@
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(601, 12);
             label2.Name = "label2";
-            label2.Size = new Size(80, 20);
+            label2.Size = new Size(145, 20);
             label2.TabIndex = 0;
-            label2.Text = "Welcome, ";
+            label2.Text = "Welcome, Customer";
             // 
             // panel3
             // 
@@ -513,7 +505,6 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
-        private Label lblUser;
         private DataGridView dgvRecentRservation;
     }
 }
