@@ -14,7 +14,7 @@ namespace Online_Hotel_Booking_Dashboards
         );
 
         public MySqlConnection Connection => connection;
-
+        
         public void Open()
         {
             try { if (connection.State != System.Data.ConnectionState.Open) connection.Open(); }
