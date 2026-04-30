@@ -165,7 +165,7 @@
             btnMyReservation.TabIndex = 11;
             btnMyReservation.Text = "📅  My Reservations";
             btnMyReservation.UseVisualStyleBackColor = true;
-            btnMyReservation.Click += btnMyReservation_Click;
+            
             // 
             // label7
             // 
