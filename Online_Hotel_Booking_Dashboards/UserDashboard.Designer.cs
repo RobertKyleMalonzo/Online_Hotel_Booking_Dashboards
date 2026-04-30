@@ -405,6 +405,7 @@
             btnViewQRCode.TabIndex = 8;
             btnViewQRCode.Text = "View QR Code";
             btnViewQRCode.UseVisualStyleBackColor = false;
+            btnViewQRCode.Click += btnViewQRCode_Click;
             // 
             // label11
             // 

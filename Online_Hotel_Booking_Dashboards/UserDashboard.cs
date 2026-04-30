@@ -141,10 +141,15 @@ namespace Online_Hotel_Booking_Dashboards
             }
         }
 
+<<<<<<< HEAD
+
+        private void btnMyReservation_Click(object sender, EventArgs e)
+=======
         // ==========================================
         // QR CODE BUTTON (FIXED + SAFE)
         // ==========================================
         private void btnMyQrCode_Click(object sender, EventArgs e)
+>>>>>>> 9641fad6ce455d7c641f26aaaa772bdbabb9530e
         {
             try
             {
@@ -198,15 +203,25 @@ namespace Online_Hotel_Booking_Dashboards
             }
         }
 
+<<<<<<< HEAD
+        private void btnViewQRCode_Click(object sender, EventArgs e)
+        {
+
+=======
         
         private void btnMyReservation_Click(object sender, EventArgs e)
         {
             LoadReservations(); // refresh only
+>>>>>>> 9641fad6ce455d7c641f26aaaa772bdbabb9530e
         }
 
         private void UserDashboard_Load_1(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+
+=======
             
+>>>>>>> 9641fad6ce455d7c641f26aaaa772bdbabb9530e
         }
     }
 }

@@ -30,9 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             panel1 = new Panel();
-            panel2 = new Panel();
-            pictureBox5 = new PictureBox();
-            label2 = new Label();
+            btnReports = new Button();
+            btnPayments = new Button();
             pictureBox6 = new PictureBox();
             button5 = new Button();
             btnStaff = new Button();
@@ -40,6 +39,9 @@
             btnReservation = new Button();
             btnRooms = new Button();
             label7 = new Label();
+            panel2 = new Panel();
+            pictureBox5 = new PictureBox();
+            label2 = new Label();
             label4 = new Label();
             panel6 = new Panel();
             pictureBox4 = new PictureBox();
@@ -61,12 +63,10 @@
             dgvRecentRservation = new DataGridView();
             btnViewQRCode = new Button();
             label11 = new Label();
-            btnPayments = new Button();
-            btnReports = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel5.SuspendLayout();
@@ -96,36 +96,31 @@
             panel1.Size = new Size(211, 620);
             panel1.TabIndex = 2;
             // 
-            // panel2
+            // btnReports
             // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(pictureBox5);
-            panel2.Controls.Add(label2);
-            panel2.Location = new Point(206, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(839, 57);
-            panel2.TabIndex = 2;
+            btnReports.FlatAppearance.BorderSize = 0;
+            btnReports.FlatStyle = FlatStyle.Flat;
+            btnReports.ForeColor = Color.White;
+            btnReports.Location = new Point(16, 450);
+            btnReports.Name = "btnReports";
+            btnReports.Size = new Size(200, 46);
+            btnReports.TabIndex = 18;
+            btnReports.Text = "📊  Reports";
+            btnReports.TextAlign = ContentAlignment.MiddleLeft;
+            btnReports.UseVisualStyleBackColor = true;
             // 
-            // pictureBox5
+            // btnPayments
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(610, 3);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(44, 45);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 1;
-            pictureBox5.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(660, 12);
-            label2.Name = "label2";
-            label2.Size = new Size(165, 25);
-            label2.TabIndex = 0;
-            label2.Text = "Welcome, Admin!";
-            label2.Click += label2_Click;
+            btnPayments.FlatAppearance.BorderSize = 0;
+            btnPayments.FlatStyle = FlatStyle.Flat;
+            btnPayments.ForeColor = Color.White;
+            btnPayments.Location = new Point(16, 398);
+            btnPayments.Name = "btnPayments";
+            btnPayments.Size = new Size(200, 46);
+            btnPayments.TabIndex = 17;
+            btnPayments.Text = "💳  Payments";
+            btnPayments.TextAlign = ContentAlignment.MiddleLeft;
+            btnPayments.UseVisualStyleBackColor = true;
             // 
             // pictureBox6
             // 
@@ -213,6 +208,37 @@
             label7.Size = new Size(103, 23);
             label7.TabIndex = 10;
             label7.Text = "My Account";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.White;
+            panel2.Controls.Add(pictureBox5);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(206, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(839, 57);
+            panel2.TabIndex = 2;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(610, 3);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(44, 45);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 1;
+            pictureBox5.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(660, 12);
+            label2.Name = "label2";
+            label2.Size = new Size(165, 25);
+            label2.TabIndex = 0;
+            label2.Text = "Welcome, Admin!";
+            label2.Click += label2_Click;
             // 
             // label4
             // 
@@ -422,6 +448,7 @@
             btnViewQRCode.TabIndex = 8;
             btnViewQRCode.Text = "View QR Code";
             btnViewQRCode.UseVisualStyleBackColor = false;
+            btnViewQRCode.Click += btnViewQRCode_Click;
             // 
             // label11
             // 
@@ -432,32 +459,6 @@
             label11.Size = new Size(159, 23);
             label11.TabIndex = 6;
             label11.Text = "Recent Reservation";
-            // 
-            // btnPayments
-            // 
-            btnPayments.FlatAppearance.BorderSize = 0;
-            btnPayments.FlatStyle = FlatStyle.Flat;
-            btnPayments.ForeColor = Color.White;
-            btnPayments.Location = new Point(16, 398);
-            btnPayments.Name = "btnPayments";
-            btnPayments.Size = new Size(200, 46);
-            btnPayments.TabIndex = 17;
-            btnPayments.Text = "💳  Payments";
-            btnPayments.TextAlign = ContentAlignment.MiddleLeft;
-            btnPayments.UseVisualStyleBackColor = true;
-            // 
-            // btnReports
-            // 
-            btnReports.FlatAppearance.BorderSize = 0;
-            btnReports.FlatStyle = FlatStyle.Flat;
-            btnReports.ForeColor = Color.White;
-            btnReports.Location = new Point(16, 450);
-            btnReports.Name = "btnReports";
-            btnReports.Size = new Size(200, 46);
-            btnReports.TabIndex = 18;
-            btnReports.Text = "📊  Reports";
-            btnReports.TextAlign = ContentAlignment.MiddleLeft;
-            btnReports.UseVisualStyleBackColor = true;
             // 
             // AdminDashboard
             // 
@@ -474,12 +475,13 @@
             Controls.Add(panel1);
             Name = "AdminDashboard";
             Text = "AdminDashboard";
+            Load += AdminDashboard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
