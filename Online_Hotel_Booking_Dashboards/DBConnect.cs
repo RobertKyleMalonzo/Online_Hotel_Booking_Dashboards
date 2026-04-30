@@ -10,7 +10,7 @@ namespace Online_Hotel_Booking_Dashboards
     internal class DBConnect
     {
         private MySqlConnection connection = new MySqlConnection(
-            "server= sql12.freesqldatabase.com;user=root;database=sql12824843;port=3306;password=;"
+            "server=sql12.freesqldatabase.com;user=sql12824843;database=sql12824843;port=3306;password=Np5sCfxH6K;"
         );
 
         public MySqlConnection Connection => connection;
