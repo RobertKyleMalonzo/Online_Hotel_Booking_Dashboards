@@ -108,6 +108,61 @@ namespace Online_Hotel_Booking_Dashboards
             this.Hide();
         }
 
+        private void LoadBookingDetails(int reservationId)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+
+                string query = @"
+                SELECT 
+                    r.reservation_id,
+                    r.user_id,
+                    rm.room_id,
+                    rm.room_type,
+                    rm.price,
+                    r.check_in,
+                    r.check_out,
+                    r.status
+                FROM reservationstbl r
+                INNER JOIN roomstbl rm ON r.room_id = rm.room_id
+                WHERE r.reservation_id = @id";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", reservationId);
+
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    DateTime checkIn = Convert.ToDateTime(dr["check_in"]);
+                    DateTime checkOut = Convert.ToDateTime(dr["check_out"]);
+
+                    int nights = (checkOut - checkIn).Days;
+                    decimal pricePerNight = Convert.ToDecimal(dr["price"]);
+                    decimal totalAmount = nights * pricePerNight;
+
+                    lblReservationID.Text = dr["reservation_id"].ToString();
+                    lblUserID.Text = dr["user_id"].ToString();
+                    lblFullName.Text = dr["fullname"].ToString();
+                    lblRoomType.Text = dr["room_type"].ToString();
+                    lblRoomID.Text = dr["room_id"].ToString();
+
+                    lblCheckIn.Text = checkIn.ToString("MMMM dd, yyyy");
+                    lblCheckOut.Text = checkOut.ToString("MMMM dd, yyyy");
+
+                    lblNights.Text = nights.ToString();
+                    lblPricePerNight.Text = "₱" + pricePerNight.ToString("N2");
+                    lblTotalAmount.Text = "₱" + totalAmount.ToString("N2");
+                    lblStatus.Text = dr["status"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No booking details found.");
+                }
+            }
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
@@ -125,6 +180,46 @@ namespace Online_Hotel_Booking_Dashboards
         }
 
         private void pictureBoxQRCode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MyQRCode_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label39_Click(object sender, EventArgs e)
         {
 
         }
