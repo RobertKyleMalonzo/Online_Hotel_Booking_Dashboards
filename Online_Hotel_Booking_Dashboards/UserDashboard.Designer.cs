@@ -139,7 +139,7 @@
             btnMyQrCode.TabIndex = 13;
             btnMyQrCode.Text = "⛶  My QR Code";
             btnMyQrCode.UseVisualStyleBackColor = true;
-            btnMyQrCode.Click += btnMyQrCode_Click;
+           
             // 
             // btnBookRoom
             // 

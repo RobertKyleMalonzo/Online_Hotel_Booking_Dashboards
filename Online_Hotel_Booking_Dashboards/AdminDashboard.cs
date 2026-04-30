@@ -145,5 +145,10 @@ namespace Online_Hotel_Booking_Dashboards
         {
 
         }
+
+        private void dgvRecentRservation_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
