@@ -380,6 +380,7 @@
             Controls.Add(panel1);
             Name = "CustomerBookRoom";
             Text = "CustomerReservation";
+            Load += CustomerBookRoom_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

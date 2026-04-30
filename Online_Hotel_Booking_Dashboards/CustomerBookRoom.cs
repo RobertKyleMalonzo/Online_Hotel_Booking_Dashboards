@@ -133,5 +133,10 @@ namespace Online_Hotel_Booking_Dashboards
                 this.Hide();
             }
         }
+
+        private void CustomerBookRoom_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
