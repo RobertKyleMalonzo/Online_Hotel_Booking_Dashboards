@@ -107,7 +107,7 @@
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 346);
+            button5.Location = new Point(-34, 386);
             button5.Name = "button5";
             button5.Size = new Size(178, 44);
             button5.TabIndex = 15;
@@ -120,7 +120,7 @@
             btnMyProfile.FlatAppearance.BorderSize = 0;
             btnMyProfile.FlatStyle = FlatStyle.Flat;
             btnMyProfile.ForeColor = Color.White;
-            btnMyProfile.Location = new Point(0, 297);
+            btnMyProfile.Location = new Point(-34, 324);
             btnMyProfile.Name = "btnMyProfile";
             btnMyProfile.Size = new Size(178, 44);
             btnMyProfile.TabIndex = 14;
@@ -133,7 +133,7 @@
             btnMyQrCode.FlatAppearance.BorderSize = 0;
             btnMyQrCode.FlatStyle = FlatStyle.Flat;
             btnMyQrCode.ForeColor = Color.White;
-            btnMyQrCode.Location = new Point(1, 247);
+            btnMyQrCode.Location = new Point(-12, 261);
             btnMyQrCode.Name = "btnMyQrCode";
             btnMyQrCode.Size = new Size(178, 44);
             btnMyQrCode.TabIndex = 13;
@@ -146,7 +146,7 @@
             btnBookRoom.FlatAppearance.BorderSize = 0;
             btnBookRoom.FlatStyle = FlatStyle.Flat;
             btnBookRoom.ForeColor = Color.White;
-            btnBookRoom.Location = new Point(1, 197);
+            btnBookRoom.Location = new Point(-12, 206);
             btnBookRoom.Name = "btnBookRoom";
             btnBookRoom.Size = new Size(178, 44);
             btnBookRoom.TabIndex = 12;
@@ -177,7 +177,6 @@
             label7.Size = new Size(103, 23);
             label7.TabIndex = 10;
             label7.Text = "My Account";
-            label7.Click += label7_Click;
             // 
             // panel2
             // 
@@ -239,7 +238,6 @@
             lblTotalBooking.Size = new Size(40, 46);
             lblTotalBooking.TabIndex = 2;
             lblTotalBooking.Text = "0";
-            lblTotalBooking.Click += lblTotalBooking_Click;
             // 
             // label3
             // 
@@ -281,7 +279,6 @@
             lblUpcoming.Size = new Size(40, 46);
             lblUpcoming.TabIndex = 3;
             lblUpcoming.Text = "0";
-            lblUpcoming.Click += lblUpcoming_Click;
             // 
             // label4
             // 
@@ -323,7 +320,6 @@
             lblCheckIn.Size = new Size(40, 46);
             lblCheckIn.TabIndex = 4;
             lblCheckIn.Text = "0";
-            lblCheckIn.Click += lblCheckIn_Click;
             // 
             // label5
             // 
@@ -365,7 +361,6 @@
             lblCancelled.Size = new Size(40, 46);
             lblCancelled.TabIndex = 5;
             lblCancelled.Text = "0";
-            lblCancelled.Click += lblCancelled_Click;
             // 
             // label6
             // 
@@ -410,6 +405,7 @@
             btnViewQRCode.TabIndex = 8;
             btnViewQRCode.Text = "View QR Code";
             btnViewQRCode.UseVisualStyleBackColor = false;
+            btnViewQRCode.Click += btnViewQRCode_Click;
             // 
             // label11
             // 
@@ -447,6 +443,7 @@
             Controls.Add(panel1);
             Name = "UserDashboard";
             Text = "UserDashboard";
+            Load += UserDashboard_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
