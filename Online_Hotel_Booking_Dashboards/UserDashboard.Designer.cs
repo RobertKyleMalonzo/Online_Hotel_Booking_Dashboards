@@ -139,7 +139,11 @@
             btnMyQrCode.TabIndex = 13;
             btnMyQrCode.Text = "⛶  My QR Code";
             btnMyQrCode.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             
+=======
+           
+>>>>>>> 4a13d0b0decb127e342914d9d00684764f80507c
             // 
             // btnBookRoom
             // 
@@ -165,7 +169,7 @@
             btnMyReservation.TabIndex = 11;
             btnMyReservation.Text = "📅  My Reservations";
             btnMyReservation.UseVisualStyleBackColor = true;
-            btnMyReservation.Click += btnMyReservation_Click;
+            
             // 
             // label7
             // 
