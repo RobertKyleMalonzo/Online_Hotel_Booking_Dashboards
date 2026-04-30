@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffDashboard));
             panel1 = new Panel();
+            panel2 = new Panel();
+            lblUser = new Label();
+            pictureBox5 = new PictureBox();
+            label2 = new Label();
             pictureBox6 = new PictureBox();
             button5 = new Button();
             btnMyProfile = new Button();
@@ -37,10 +41,6 @@
             btnBookRoom = new Button();
             btnMyReservation = new Button();
             label7 = new Label();
-            panel2 = new Panel();
-            lblUser = new Label();
-            pictureBox5 = new PictureBox();
-            label2 = new Label();
             panel7 = new Panel();
             dgvRecentRservation = new DataGridView();
             btnViewQRCode = new Button();
@@ -67,9 +67,9 @@
             lblTotalBooking = new Label();
             label9 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRecentRservation).BeginInit();
             panel3.SuspendLayout();
@@ -99,6 +99,47 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(195, 567);
             panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.White;
+            panel2.Controls.Add(lblUser);
+            panel2.Controls.Add(pictureBox5);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(201, 9);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(794, 48);
+            panel2.TabIndex = 2;
+            // 
+            // lblUser
+            // 
+            lblUser.AutoSize = true;
+            lblUser.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUser.Location = new Point(680, 12);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(40, 20);
+            lblUser.TabIndex = 2;
+            lblUser.Text = "User";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(545, 3);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(50, 40);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 1;
+            pictureBox5.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(601, 12);
+            label2.Name = "label2";
+            label2.Size = new Size(80, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Welcome, ";
             // 
             // pictureBox6
             // 
@@ -180,47 +221,6 @@
             label7.Size = new Size(103, 23);
             label7.TabIndex = 10;
             label7.Text = "My Account";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(lblUser);
-            panel2.Controls.Add(pictureBox5);
-            panel2.Controls.Add(label2);
-            panel2.Location = new Point(201, 9);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(794, 48);
-            panel2.TabIndex = 2;
-            // 
-            // lblUser
-            // 
-            lblUser.AutoSize = true;
-            lblUser.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUser.Location = new Point(680, 12);
-            lblUser.Name = "lblUser";
-            lblUser.Size = new Size(40, 20);
-            lblUser.TabIndex = 2;
-            lblUser.Text = "User";
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(545, 3);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(50, 40);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 1;
-            pictureBox5.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(601, 12);
-            label2.Name = "label2";
-            label2.Size = new Size(80, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Welcome, ";
             // 
             // panel7
             // 
@@ -498,12 +498,13 @@
             Controls.Add(panel1);
             Name = "StaffDashboard";
             Text = "StaffDashboard";
+            Load += StaffDashboard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRecentRservation).EndInit();

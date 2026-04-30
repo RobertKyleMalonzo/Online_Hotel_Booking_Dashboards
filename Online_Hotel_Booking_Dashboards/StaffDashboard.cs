@@ -26,5 +26,10 @@ namespace Online_Hotel_Booking_Dashboards
         {
 
         }
+
+        private void StaffDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
