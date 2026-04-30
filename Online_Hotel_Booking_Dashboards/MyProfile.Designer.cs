@@ -42,7 +42,6 @@
             btnMyReservation = new Button();
             label7 = new Label();
             panel3 = new Panel();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
@@ -140,48 +139,52 @@
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 346);
+            button5.Location = new Point(-34, 371);
             button5.Name = "button5";
             button5.Size = new Size(178, 44);
             button5.TabIndex = 15;
             button5.Text = "➜]  Logout";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // btnMyProfile
             // 
             btnMyProfile.FlatAppearance.BorderSize = 0;
             btnMyProfile.FlatStyle = FlatStyle.Flat;
             btnMyProfile.ForeColor = Color.White;
-            btnMyProfile.Location = new Point(0, 297);
+            btnMyProfile.Location = new Point(-54, 315);
             btnMyProfile.Name = "btnMyProfile";
-            btnMyProfile.Size = new Size(178, 44);
+            btnMyProfile.Size = new Size(223, 44);
             btnMyProfile.TabIndex = 14;
             btnMyProfile.Text = "👤  Profile";
             btnMyProfile.UseVisualStyleBackColor = true;
+            btnMyProfile.Click += btnMyProfile_Click;
             // 
             // btnMyQrCode
             // 
             btnMyQrCode.FlatAppearance.BorderSize = 0;
             btnMyQrCode.FlatStyle = FlatStyle.Flat;
             btnMyQrCode.ForeColor = Color.White;
-            btnMyQrCode.Location = new Point(1, 247);
+            btnMyQrCode.Location = new Point(-12, 259);
             btnMyQrCode.Name = "btnMyQrCode";
-            btnMyQrCode.Size = new Size(178, 44);
+            btnMyQrCode.Size = new Size(181, 44);
             btnMyQrCode.TabIndex = 13;
             btnMyQrCode.Text = "⛶  My QR Code";
             btnMyQrCode.UseVisualStyleBackColor = true;
+            btnMyQrCode.Click += btnMyQrCode_Click;
             // 
             // btnBookRoom
             // 
             btnBookRoom.FlatAppearance.BorderSize = 0;
             btnBookRoom.FlatStyle = FlatStyle.Flat;
             btnBookRoom.ForeColor = Color.White;
-            btnBookRoom.Location = new Point(1, 197);
+            btnBookRoom.Location = new Point(-24, 205);
             btnBookRoom.Name = "btnBookRoom";
-            btnBookRoom.Size = new Size(178, 44);
+            btnBookRoom.Size = new Size(193, 44);
             btnBookRoom.TabIndex = 12;
             btnBookRoom.Text = "🛏  Book Room";
             btnBookRoom.UseVisualStyleBackColor = true;
+            btnBookRoom.Click += btnBookRoom_Click;
             // 
             // btnMyReservation
             // 
@@ -194,6 +197,7 @@
             btnMyReservation.TabIndex = 11;
             btnMyReservation.Text = "📅  My Reservations";
             btnMyReservation.UseVisualStyleBackColor = true;
+            btnMyReservation.Click += btnMyReservation_Click;
             // 
             // label7
             // 
@@ -209,23 +213,12 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(label3);
             panel3.Location = new Point(183, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(794, 48);
             panel3.TabIndex = 4;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(680, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(40, 20);
-            label1.TabIndex = 2;
-            label1.Text = "User";
             // 
             // pictureBox1
             // 
@@ -243,9 +236,9 @@
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(601, 12);
             label3.Name = "label3";
-            label3.Size = new Size(80, 20);
+            label3.Size = new Size(145, 20);
             label3.TabIndex = 0;
-            label3.Text = "Welcome, ";
+            label3.Text = "Welcome, Customer";
             // 
             // label4
             // 
@@ -359,6 +352,7 @@
             chkPassword.TabIndex = 16;
             chkPassword.Text = "Show password";
             chkPassword.UseVisualStyleBackColor = true;
+            chkPassword.CheckedChanged += chkPassword_CheckedChanged;
             // 
             // btnUpgradeProfile
             // 
@@ -373,6 +367,7 @@
             btnUpgradeProfile.TabIndex = 18;
             btnUpgradeProfile.Text = "Upgrade Profile";
             btnUpgradeProfile.UseVisualStyleBackColor = false;
+            btnUpgradeProfile.Click += btnUpgradeProfile_Click;
             // 
             // btnChangePassword
             // 
@@ -386,6 +381,7 @@
             btnChangePassword.TabIndex = 19;
             btnChangePassword.Text = "Change Password";
             btnChangePassword.UseVisualStyleBackColor = false;
+            btnChangePassword.Click += btnChangePassword_Click;
             // 
             // MyProfile
             // 
@@ -439,7 +435,6 @@
         private Button btnMyReservation;
         private Label label7;
         private Panel panel3;
-        private Label label1;
         private PictureBox pictureBox1;
         private Label label3;
         private Label label4;

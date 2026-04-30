@@ -42,11 +42,10 @@
             btnMyReservation = new Button();
             label7 = new Label();
             panel3 = new Panel();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             panel4 = new Panel();
-            cmbNumberGuest = new ComboBox();
+            txtGuessLimit = new TextBox();
             cmbRoomType = new ComboBox();
             dtpCheckOut = new DateTimePicker();
             dtpCheckIn = new DateTimePicker();
@@ -139,60 +138,65 @@
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 346);
+            button5.Location = new Point(-28, 367);
             button5.Name = "button5";
             button5.Size = new Size(178, 44);
             button5.TabIndex = 15;
             button5.Text = "➜]  Logout";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // btnMyProfile
             // 
             btnMyProfile.FlatAppearance.BorderSize = 0;
             btnMyProfile.FlatStyle = FlatStyle.Flat;
             btnMyProfile.ForeColor = Color.White;
-            btnMyProfile.Location = new Point(0, 297);
+            btnMyProfile.Location = new Point(-28, 309);
             btnMyProfile.Name = "btnMyProfile";
             btnMyProfile.Size = new Size(178, 44);
             btnMyProfile.TabIndex = 14;
             btnMyProfile.Text = "👤  Profile";
             btnMyProfile.UseVisualStyleBackColor = true;
+            btnMyProfile.Click += btnMyProfile_Click;
             // 
             // btnMyQrCode
             // 
             btnMyQrCode.FlatAppearance.BorderSize = 0;
             btnMyQrCode.FlatStyle = FlatStyle.Flat;
             btnMyQrCode.ForeColor = Color.White;
-            btnMyQrCode.Location = new Point(1, 247);
+            btnMyQrCode.Location = new Point(-9, 259);
             btnMyQrCode.Name = "btnMyQrCode";
             btnMyQrCode.Size = new Size(178, 44);
             btnMyQrCode.TabIndex = 13;
             btnMyQrCode.Text = "⛶  My QR Code";
             btnMyQrCode.UseVisualStyleBackColor = true;
+            btnMyQrCode.Click += btnMyQrCode_Click;
             // 
             // btnBookRoom
             // 
             btnBookRoom.FlatAppearance.BorderSize = 0;
             btnBookRoom.FlatStyle = FlatStyle.Flat;
             btnBookRoom.ForeColor = Color.White;
-            btnBookRoom.Location = new Point(1, 197);
+            btnBookRoom.Location = new Point(-9, 213);
             btnBookRoom.Name = "btnBookRoom";
             btnBookRoom.Size = new Size(178, 44);
             btnBookRoom.TabIndex = 12;
             btnBookRoom.Text = "🛏  Book Room";
             btnBookRoom.UseVisualStyleBackColor = true;
+            btnBookRoom.Click += btnBookRoom_Click;
             // 
             // btnMyReservation
             // 
             btnMyReservation.FlatAppearance.BorderSize = 0;
             btnMyReservation.FlatStyle = FlatStyle.Flat;
             btnMyReservation.ForeColor = Color.White;
-            btnMyReservation.Location = new Point(1, 149);
+            btnMyReservation.Location = new Point(3, 163);
             btnMyReservation.Name = "btnMyReservation";
             btnMyReservation.Size = new Size(178, 44);
             btnMyReservation.TabIndex = 11;
             btnMyReservation.Text = "📅  My Reservations";
             btnMyReservation.UseVisualStyleBackColor = true;
+            btnMyReservation.Click += btnMyReservation_Click;
             // 
             // label7
             // 
@@ -208,23 +212,12 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(label3);
             panel3.Location = new Point(183, 2);
             panel3.Name = "panel3";
             panel3.Size = new Size(794, 48);
             panel3.TabIndex = 2;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(680, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(40, 20);
-            label1.TabIndex = 2;
-            label1.Text = "User";
             // 
             // pictureBox1
             // 
@@ -242,14 +235,14 @@
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(601, 12);
             label3.Name = "label3";
-            label3.Size = new Size(80, 20);
+            label3.Size = new Size(145, 20);
             label3.TabIndex = 0;
-            label3.Text = "Welcome, ";
+            label3.Text = "Welcome, Customer";
             // 
             // panel4
             // 
             panel4.BackColor = Color.White;
-            panel4.Controls.Add(cmbNumberGuest);
+            panel4.Controls.Add(txtGuessLimit);
             panel4.Controls.Add(cmbRoomType);
             panel4.Controls.Add(dtpCheckOut);
             panel4.Controls.Add(dtpCheckIn);
@@ -265,14 +258,12 @@
             panel4.Size = new Size(736, 351);
             panel4.TabIndex = 3;
             // 
-            // cmbNumberGuest
+            // txtGuessLimit
             // 
-            cmbNumberGuest.FormattingEnabled = true;
-            cmbNumberGuest.Items.AddRange(new object[] { "1 guest", "2 guest", "3 guest", "4 guest", "5 guest", "6 guest" });
-            cmbNumberGuest.Location = new Point(194, 211);
-            cmbNumberGuest.Name = "cmbNumberGuest";
-            cmbNumberGuest.Size = new Size(510, 28);
-            cmbNumberGuest.TabIndex = 19;
+            txtGuessLimit.Location = new Point(194, 208);
+            txtGuessLimit.Name = "txtGuessLimit";
+            txtGuessLimit.Size = new Size(513, 27);
+            txtGuessLimit.TabIndex = 19;
             // 
             // cmbRoomType
             // 
@@ -316,6 +307,7 @@
             btnBookNow.TabIndex = 13;
             btnBookNow.Text = "Book now";
             btnBookNow.UseVisualStyleBackColor = false;
+            btnBookNow.Click += btnBookNow_Click;
             // 
             // label5
             // 
@@ -418,7 +410,6 @@
         private PictureBox pictureBox5;
         private Label label2;
         private Panel panel3;
-        private Label label1;
         private PictureBox pictureBox1;
         private Label label3;
         private Panel panel4;
@@ -433,6 +424,6 @@
         private DateTimePicker dtpCheckOut;
         private DateTimePicker dtpCheckIn;
         private ComboBox cmbRoomType;
-        private ComboBox cmbNumberGuest;
+        private TextBox txtGuessLimit;
     }
 }

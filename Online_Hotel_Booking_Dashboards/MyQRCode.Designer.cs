@@ -42,14 +42,13 @@
             btnMyReservation = new Button();
             label7 = new Label();
             panel3 = new Panel();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             panel4 = new Panel();
             button1 = new Button();
-            pictureBox2 = new PictureBox();
+            pictureBoxQRCode = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -57,7 +56,7 @@
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQRCode).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -132,60 +131,65 @@
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 346);
+            button5.Location = new Point(-34, 352);
             button5.Name = "button5";
             button5.Size = new Size(178, 44);
             button5.TabIndex = 15;
             button5.Text = "➜]  Logout";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // btnMyProfile
             // 
             btnMyProfile.FlatAppearance.BorderSize = 0;
             btnMyProfile.FlatStyle = FlatStyle.Flat;
             btnMyProfile.ForeColor = Color.White;
-            btnMyProfile.Location = new Point(0, 297);
+            btnMyProfile.Location = new Point(-31, 301);
             btnMyProfile.Name = "btnMyProfile";
             btnMyProfile.Size = new Size(178, 44);
             btnMyProfile.TabIndex = 14;
             btnMyProfile.Text = "👤  Profile";
             btnMyProfile.UseVisualStyleBackColor = true;
+            btnMyProfile.Click += btnMyProfile_Click;
             // 
             // btnMyQrCode
             // 
             btnMyQrCode.FlatAppearance.BorderSize = 0;
             btnMyQrCode.FlatStyle = FlatStyle.Flat;
             btnMyQrCode.ForeColor = Color.White;
-            btnMyQrCode.Location = new Point(1, 247);
+            btnMyQrCode.Location = new Point(-13, 252);
             btnMyQrCode.Name = "btnMyQrCode";
             btnMyQrCode.Size = new Size(178, 44);
             btnMyQrCode.TabIndex = 13;
             btnMyQrCode.Text = "⛶  My QR Code";
             btnMyQrCode.UseVisualStyleBackColor = true;
+            btnMyQrCode.Click += btnMyQrCode_Click;
             // 
             // btnBookRoom
             // 
             btnBookRoom.FlatAppearance.BorderSize = 0;
             btnBookRoom.FlatStyle = FlatStyle.Flat;
             btnBookRoom.ForeColor = Color.White;
-            btnBookRoom.Location = new Point(1, 197);
+            btnBookRoom.Location = new Point(-13, 199);
             btnBookRoom.Name = "btnBookRoom";
             btnBookRoom.Size = new Size(178, 44);
             btnBookRoom.TabIndex = 12;
             btnBookRoom.Text = "🛏  Book Room";
             btnBookRoom.UseVisualStyleBackColor = true;
+            btnBookRoom.Click += btnBookRoom_Click;
             // 
             // btnMyReservation
             // 
             btnMyReservation.FlatAppearance.BorderSize = 0;
             btnMyReservation.FlatStyle = FlatStyle.Flat;
             btnMyReservation.ForeColor = Color.White;
-            btnMyReservation.Location = new Point(1, 149);
+            btnMyReservation.Location = new Point(0, 149);
             btnMyReservation.Name = "btnMyReservation";
             btnMyReservation.Size = new Size(178, 44);
             btnMyReservation.TabIndex = 11;
             btnMyReservation.Text = "📅  My Reservations";
             btnMyReservation.UseVisualStyleBackColor = true;
+            btnMyReservation.Click += btnMyReservation_Click;
             // 
             // label7
             // 
@@ -201,23 +205,12 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(label3);
             panel3.Location = new Point(184, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(794, 48);
             panel3.TabIndex = 3;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(680, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(40, 20);
-            label1.TabIndex = 2;
-            label1.Text = "User";
             // 
             // pictureBox1
             // 
@@ -235,9 +228,9 @@
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(601, 12);
             label3.Name = "label3";
-            label3.Size = new Size(80, 20);
+            label3.Size = new Size(145, 20);
             label3.TabIndex = 0;
-            label3.Text = "Welcome, ";
+            label3.Text = "Welcome, Customer";
             // 
             // label4
             // 
@@ -262,7 +255,7 @@
             // 
             panel4.BackColor = Color.White;
             panel4.Controls.Add(button1);
-            panel4.Controls.Add(pictureBox2);
+            panel4.Controls.Add(pictureBoxQRCode);
             panel4.Location = new Point(338, 133);
             panel4.Name = "panel4";
             panel4.Size = new Size(411, 405);
@@ -281,13 +274,14 @@
             button1.Text = "Download QR Code";
             button1.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
+            // pictureBoxQRCode
             // 
-            pictureBox2.Location = new Point(30, 17);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(353, 283);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
+            pictureBoxQRCode.Location = new Point(30, 17);
+            pictureBoxQRCode.Name = "pictureBoxQRCode";
+            pictureBoxQRCode.Size = new Size(353, 283);
+            pictureBoxQRCode.TabIndex = 0;
+            pictureBoxQRCode.TabStop = false;
+            pictureBoxQRCode.Click += pictureBoxQRCode_Click;
             // 
             // MyQRCode
             // 
@@ -311,7 +305,7 @@
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxQRCode).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -331,13 +325,12 @@
         private Button btnMyReservation;
         private Label label7;
         private Panel panel3;
-        private Label label1;
         private PictureBox pictureBox1;
         private Label label3;
         private Label label4;
         private Label label5;
         private Panel panel4;
         private Button button1;
-        private PictureBox pictureBox2;
+        private PictureBox pictureBoxQRCode;
     }
 }

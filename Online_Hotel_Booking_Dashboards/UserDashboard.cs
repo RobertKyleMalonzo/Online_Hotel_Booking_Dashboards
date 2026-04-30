@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Online_Hotel_Booking_Dashboards
 {
@@ -40,12 +41,8 @@ namespace Online_Hotel_Booking_Dashboards
                                         status
                                  FROM reservations";
 
-                MySql.Data.MySqlClient.MySqlCommand cmd =
-                    new MySql.Data.MySqlClient.MySqlCommand(query, db.Connection);
-
-                MySql.Data.MySqlClient.MySqlDataAdapter adapter =
-                    new MySql.Data.MySqlClient.MySqlDataAdapter(cmd);
-
+                MySqlCommand cmd = new MySqlCommand(query, db.Connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 DataTable table = new DataTable();
 
                 adapter.Fill(table);
@@ -59,7 +56,7 @@ namespace Online_Hotel_Booking_Dashboards
                 dgvRecentRservation.Columns["check_out"].HeaderText = "Check-out";
                 dgvRecentRservation.Columns["status"].HeaderText = "Status";
 
-                // ADD VIEW BUTTON
+                // ADD VIEW BUTTON (only once)
                 if (!dgvRecentRservation.Columns.Contains("View"))
                 {
                     DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
@@ -71,10 +68,10 @@ namespace Online_Hotel_Booking_Dashboards
                     dgvRecentRservation.Columns.Add(btn);
                 }
 
-                // TOTAL BOOKINGS
+
                 lblTotalBooking.Text = table.Rows.Count.ToString();
 
-                // STATUS COUNTER
+
                 CountStatus();
 
                 adapter.Dispose();
@@ -122,7 +119,7 @@ namespace Online_Hotel_Booking_Dashboards
         }
 
         // ==========================================
-        // VIEW BUTTON CLICK
+        // VIEW BUTTON CLICK (GRID)
         // ==========================================
         private void dgvRecentRservation_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -132,11 +129,11 @@ namespace Online_Hotel_Booking_Dashboards
                 DataGridViewRow row = dgvRecentRservation.Rows[e.RowIndex];
 
                 string info =
-                    "Reservation ID: " + row.Cells["reservation_id"].Value.ToString() + "\n" +
-                    "Room: " + row.Cells["room_number"].Value.ToString() + "\n" +
-                    "Check-in: " + row.Cells["check_in"].Value.ToString() + "\n" +
-                    "Check-out: " + row.Cells["check_out"].Value.ToString() + "\n" +
-                    "Status: " + row.Cells["status"].Value.ToString();
+                    "Reservation ID: " + row.Cells["reservation_id"].Value + "\n" +
+                    "Room: " + row.Cells["room_number"].Value + "\n" +
+                    "Check-in: " + row.Cells["check_in"].Value + "\n" +
+                    "Check-out: " + row.Cells["check_out"].Value + "\n" +
+                    "Status: " + row.Cells["status"].Value;
 
                 MessageBox.Show(info, "Reservation Details",
                     MessageBoxButtons.OK,
@@ -144,14 +141,36 @@ namespace Online_Hotel_Booking_Dashboards
             }
         }
 
+<<<<<<< HEAD
 
         private void btnMyReservation_Click(object sender, EventArgs e)
+=======
+        // ==========================================
+        // QR CODE BUTTON (FIXED + SAFE)
+        // ==========================================
+        private void btnMyQrCode_Click(object sender, EventArgs e)
+>>>>>>> 9641fad6ce455d7c641f26aaaa772bdbabb9530e
         {
-            UserDashboard reservation = new UserDashboard();
-            reservation.Show();
-            this.Hide();
+            try
+            {
+                MyQRCode myQRCode = new MyQRCode();
+                myQRCode.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Unable to open QR Code page.\n\n" + ex.Message,
+                    "System Message",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
         }
 
+        // ==========================================
+        // NAVIGATION BUTTONS
+        // ==========================================
         private void btnBookRoom_Click(object sender, EventArgs e)
         {
             CustomerBookRoom bookroom = new CustomerBookRoom();
@@ -159,12 +178,7 @@ namespace Online_Hotel_Booking_Dashboards
             this.Hide();
         }
 
-        private void btnMyQrCode_Click(object sender, EventArgs e)
-        {
-            MyQRCode myQRCode = new MyQRCode();
-            myQRCode.Show();
-            this.Hide();
-        }
+
 
         private void btnMyProfile_Click(object sender, EventArgs e)
         {
@@ -189,14 +203,25 @@ namespace Online_Hotel_Booking_Dashboards
             }
         }
 
+<<<<<<< HEAD
         private void btnViewQRCode_Click(object sender, EventArgs e)
         {
 
+=======
+        
+        private void btnMyReservation_Click(object sender, EventArgs e)
+        {
+            LoadReservations(); // refresh only
+>>>>>>> 9641fad6ce455d7c641f26aaaa772bdbabb9530e
         }
 
         private void UserDashboard_Load_1(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 9641fad6ce455d7c641f26aaaa772bdbabb9530e
         }
     }
 }

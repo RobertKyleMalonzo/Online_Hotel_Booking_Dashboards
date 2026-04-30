@@ -112,7 +112,7 @@
             label6.ForeColor = SystemColors.ButtonFace;
             label6.Location = new Point(312, 157);
             label6.Name = "label6";
-            label6.Size = new Size(39, 28);
+            label6.Size = new Size(35, 28);
             label6.TabIndex = 23;
             label6.Text = "👤";
             // 
@@ -151,6 +151,7 @@
             button1.TabIndex = 19;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // chkShowPassword
             // 
@@ -163,6 +164,7 @@
             chkShowPassword.TabIndex = 18;
             chkShowPassword.Text = "Show password";
             chkShowPassword.UseVisualStyleBackColor = true;
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged_1;
             // 
             // label3
             // 
